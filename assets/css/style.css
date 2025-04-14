@@ -423,7 +423,7 @@ p {
     padding: 0 8%;
   }
   .nav-links{
-    left: 25%;
+    left: 29%;
   }
   .logo img {
     height: 55px;
@@ -484,9 +484,9 @@ p {
     height: 70px;
   }
   
-  .navbar .btn1 {
-    font-size: 1.1rem;
-    padding: 12px 30px;
+  .navbar .btnz {
+    font-size: 1.3rem;
+    padding: 15px 37px;
   }
 }
 
@@ -584,7 +584,7 @@ p {
   max-height: 1200px;
   display: flex;
   margin: 2vh 3%;
-  top: -10vh;
+  top: -11vh;
   align-items: center;
   background: linear-gradient(135deg, rgb(225, 234, 251) 0%, rgb(212, 225, 239) 100%);
   position: relative;
@@ -740,6 +740,9 @@ p {
   .hero h1 {
     font-size: 4rem;
   }
+  .hero{
+   margin-top: 2.5%;
+  }
   
   .hero h3,
   .hero p {
@@ -747,7 +750,8 @@ p {
   }
   
   .hero-img {
-    right: -1%;
+    top: 55%;
+    right: 0%;
   }
 }
 
@@ -758,7 +762,8 @@ p {
   }
 
   .hero-content {
-    max-width: 1000px;
+   margin-left: -5%;
+    max-width: 1200px;
     flex: 3;
   }
   
@@ -772,21 +777,22 @@ p {
   }
   
   .hero-img {
-    right: -5%;
+    right: -6%;
     height: 100%;
   }
 }
 
 @media (min-width: 2700px) {
   .hero{
-    top: -7rem;
+    top: -11rem;
   }
   .container {
-    max-width: 2400px;
+    max-width: 3000px;
   }
   
   .hero-content {
-    max-width: 1000px;
+    max-width: 1300px;
+    margin-left: -10vh;
   }
   
   .hero h1 {
@@ -1671,6 +1677,11 @@ overflow: hidden;
   }
 
   @media (min-width:2400px){
+     .requiry{
+     margin-top: -13vh;
+     margin-bottom: -14vh;
+      }
+
     .info-section .bottom-image {
       width: 50vh;
       right: -19%;
@@ -1822,6 +1833,90 @@ overflow: hidden;
 
 .about-content h2 {
   margin-bottom: 20px;
+}
+
+/* Responsive adjustments for very large screens */
+@media (min-width: 1800px) {
+  .about-container {
+    gap: 80px;
+    max-width: 2000px;
+  }
+  
+  .about-content h2 {
+    font-size: 3rem;
+  }
+  
+  .about-content p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .about-container {
+    margin: 0;
+    gap: 100px;
+    max-width: 2400px;
+  }
+  
+  .about-image img {
+    max-width: 900px;
+  }
+  
+  .about-content{
+    width: 100%;
+    max-width: 1300px;
+  }
+  .about-content h2 {
+    font-size: 3.5rem;
+  }
+  
+  .about-content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 2400px) {
+  .about-c{
+    max-width: 1800px;
+  }
+  .about-container {
+    gap: 100px;
+    max-width: 2900px;
+   
+  }
+  
+  .about-image img {
+    max-width: 1000px;
+  }
+  
+  .about-content h2 {
+    font-size: 4rem;
+  }
+  
+  .about-content p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 2800px) {
+  .about-container {
+    gap: 150px;
+    max-width: 2800px;
+  }
+  
+  .about-image img {
+    max-width: 1200px;
+  }
+  
+  .about-content h2 {
+    font-size: 4.5rem;
+  margin-bottom: 2.5rem;
+  }
+  
+  .about-content p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Clients Section */
@@ -2035,8 +2130,10 @@ overflow: hidden;
 @media (min-width:2100px) {
   .slider-section{
     .slider-section{
-      height: 20%;
+     height: 700px;
     }
+
+   
   }
   
 }
@@ -2673,6 +2770,7 @@ overflow: hidden;
         font-size: 0.9rem;
       }
     }
+   
     
     @media (max-width: 576px) {
 
@@ -2682,7 +2780,7 @@ overflow: hidden;
     }
  
     .services-menu{
-      margin-bottom: -30vh;
+      margin-bottom: -55vh;
     }
       .services-section {
         padding: 1rem 5%;
