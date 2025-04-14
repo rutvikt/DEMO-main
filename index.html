@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
+ 
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo">
+        <img src="./assets/images/th.png" alt="Logo">
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="./pages/Company.html">Company</a></li>
+        <li class="services-dropdown">
+          <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="services-mega-menu">
+            <div class="services-track-container">
+              <div class="services-track">
+                <a href="./pages/GraphicDesign.html" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb')"></div>
+                  <div class="card-content">
+                   
+                    <h3>Graphic Design</h3>
+                  </div>
+                </a>
+                <a href="./pages/mobileApp.html" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6')"></div>
+                  <div class="card-content">
+                   
+                    <h3>Mobile App Development</h3>
+                  </div>
+                </a>
+                <a href="./pages/webDevlopment.html" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d')"></div>
+                  <div class="card-content">
+                   
+                    <h3>Web Development</h3>
+                  </div>
+                </a>
+                <a href="/service/ui-ux" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1541462608143-67571c6738dd')"></div>
+                  <div class="card-content">
+              
+                    <h3>UI/UX Design</h3>
+                  </div>
+                </a>
+                <a href="/service/marketing" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093')"></div>
+                  <div class="card-content">
+                 
+                    <h3>Marketing Solutions</h3>
+                  </div>
+                </a>
+                <a href="/service/custom-software" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71')"></div>
+                  <div class="card-content">
+                 
+                    <h3>Custom Software</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="./pages/blog.html">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <button class="btnz btnz-outline" id="becomeClientBtn">+ Become a Client</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal" id="clientModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Hey! Tell us all the things</h3>
+      <form id="clientForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John from Apple">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="john@apple.com">
+        </div>
+        <div class="form-group">
+          <label for="message">Something about your great idea</label>
+          <textarea id="message" placeholder="Describe your project"></textarea>
+        </div>
+        <div class="form-group">
+          <p>Our Email: hey@techorses.com</p>
+        </div>
+        <button type="submit" class="btn1">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container1">
+      <div class="hero-content">
+        <h3>Your Trusted Partner for <span class="highlight">IT</span> Solutions and Services.</h3>
+        <h1>Ready to Redefine Your Digital Journey?</h1>
+        <p>From seamless web development to captivating mobile apps, stunning graphics, and strategic marketing solutions. </p>
+        <h3>We’re here to elevate your digital presence.</h3>
+        <a href="https://calendly.com/techorses/discovery-call?month=2025-04" class="btn1">NEED ASSITANCE?</a>
+      </div>
+      <img class="hero-img" src="./assets/images/HERO.png" alt="IT Solutions">
+    </div>
+    
+    <div class="scroll-down">
+      <span>Scroll Down</span>
+      <div class="mouse"></div>
+    </div>
+  
+    <!-- Sticky left contact button -->
+    <div class="sticky-left">
+      <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="contact-btn" data-tooltip="Contact Us">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="whatsapp-btn" data-tooltip="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  
+    <!-- Sticky right social links -->
+    <div class="sticky-right">
+      <a href="https://www.linkedin.com/company/techorses-ride-the-technology/" class="social-link linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.instagram.com/techorses_/#" class="social-link instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+      <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL" class="social-link facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">A Little About Us</h2>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="./assets/images/about.webp" alt="Our Team">
+        </div>
+        <div class="about-content">
+          <!-- <h2>We are a <span class="highlight">creative</span> digital agency</h2> -->
+          <p>At Techorses, we’re your digital partners for success. From web and mobile app development to graphic design and digital marketing, we specialize in crafting solutions that propel your business forward.</p>
+          <p>With a focus on innovation and customer satisfaction, we deliver cost-effective, high-quality services tailored to your needs.</p>
+          <p>Let Techorses be your guide to navigating the digital realm and achieving your business goals.</p>
+          <!-- <a href="#services" class="btn1">Our Services</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section class="clients" id="clients">
+    <div class="container">
+        <h2 class="section-title">Our Clients</h2>
+        <!-- <p class="text-center">We've had the privilege to work with some of the most innovative companies in the world</p> -->
+        
+        <div class="client-logos">
+            <div class="client-track">
+                <div class="client-card"><img src="./assets/images/9to69-300x300.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/agroniv-768x211.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/biowave.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/bulkagrochem-768x151.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/6f15c5706d3c446992d82e22f1fbb842__1_-removebg-preview.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/4db360b0-2b7e-4b0d-b8ae-236dc4b8fbc7-removebg-preview.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/crklogo.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/final-Photoroom.png-Photoroom-768x543.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/sunshine-preschool-300x300.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/Lemon_Tree_Hotels_Logo-768x430.avif" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/smart_class.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/vrajevlogo-300x172.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/vise-768x199.webp" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/unicrop-768x237.webp" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/logo--768x318.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/neshayatech-logo-768x112.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/schreet-CORPORATION-768x388.png" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/6f15c5706d3c446992d82e22f1fbb842.webp" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/4db360b0-2b7e-4b0d-b8ae-236dc4b8fbc7.jpg" alt="Client Logo"></div>
+                <div class="client-card"><img src="./assets/images/meinmusafir-qpcnli44n0s56ez0yhl02u691twpqmsag8f7m4kzes.png" alt="Client Logo"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Testimonials Section -->
+ 
+  <section class="slider-section">
+    <div class="wheel">
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=Harish&background=4a90e2&color=fff&size=128&rounded=true" alt="Sarah Johnson">
+        <div class="reviewer-name">Harish Abubaker</div>
+        <!-- <div class="reviewer-title">Marketing Director</div> -->
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"I have done a project with them recently. Their attitude and professionalism is exceptional. The budget was reasonable and all deadlines were promptly met. The work quality is also excellent. Highly recommend for anyone looking for software solutions."</div>
+        <!-- <div class="review-date">March 15, 2023</div> -->
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=PD&background=4a90e2&color=fff&size=128&rounded=true" alt="Michael Chen">
+        <div class="reviewer-name">Parth Dhanekar</div>
+     
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Techorses did an amazing job on my graphic design project. The design was creative, and professional, and understood my vision perfectly. The final result was fantastic. Highly recommend!"</div>
+     
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=DM&background=4a90e2&color=fff&size=128&rounded=true" alt="Emily Rodriguez">
+        <div class="reviewer-name">Deven Mhatre</div>
+  
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"If you’re searching for a reliable, innovative, and one-stop solution IT company, look no further than Techorses. Their team of seasoned professionals consistently exceeds expectations, offering cutting-edge solutions and exceptional customer service."</div>
+        
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=SH&background=4a90e2&color=fff&size=128&rounded=true" alt="David Wilson">
+        <div class="reviewer-name">Sameera Hussain</div>
+   
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Work was professionally done according to our requirements and given on time. Thank you."</div>
+       
+      </div>
+      
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=ND&background=4a90e2&color=fff&size=128&rounded=true" alt="Jessica Kim">
+        <div class="reviewer-name">Nirav Dhrangdhariya</div>
+     
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Superior service for Graphics Solutions. A step ahead of imagination to exploration."</div>
+     
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=DD&background=4a90e2&color=fff&size=128&rounded=true" alt="Sarah Johnson">
+        <div class="reviewer-name">Dhruv Dave</div>
+    
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Excellent experience with Techorses for my project. They delivered a stunning website that was not only visually appealing but also highly functional. The whole process was smooth and professional. I highly recommend Techorses for top-notch web design and development services."</div>
+        
+      </div>
+
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=Harish&background=4a90e2&color=fff&size=128&rounded=true" alt="Sarah Johnson">
+        <div class="reviewer-name">Harish Abubaker</div>
+
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"I have done a project with them recently. Their attitude and professionalism is exceptional. The budget was reasonable and all deadlines were promptly met. The work quality is also excellent. Highly recommend for anyone looking for software solutions."</div>
+     
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=PD&background=4a90e2&color=fff&size=128&rounded=true" alt="Michael Chen">
+        <div class="reviewer-name">Parth Dhanekar</div>
+    
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Techorses did an amazing job on my graphic design project. The design was creative, and professional, and understood my vision perfectly. The final result was fantastic. Highly recommend!"</div>
+      
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=DM&background=4a90e2&color=fff&size=128&rounded=true" alt="Emily Rodriguez">
+        <div class="reviewer-name">Deven Mhatre</div>
+  
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"If you’re searching for a reliable, innovative, and one-stop solution IT company, look no further than Techorses. Their team of seasoned professionals consistently exceeds expectations, offering cutting-edge solutions and exceptional customer service."</div>
+     
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=SH&background=4a90e2&color=fff&size=128&rounded=true" alt="David Wilson">
+        <div class="reviewer-name">Sameera Hussain</div>
+       
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Work was professionally done according to our requirements and given on time. Thank you."</div>
+        
+      </div>
+      
+     
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=Harish&background=4a90e2&color=fff&size=128&rounded=true" alt="Sarah Johnson">
+        <div class="reviewer-name">Harish Abubaker</div>
+   
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"I have done a project with them recently. Their attitude and professionalism is exceptional. The budget was reasonable and all deadlines were promptly met. The work quality is also excellent. Highly recommend for anyone looking for software solutions."</div>
+    
+      </div>
+      
+     
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=DD&background=4a90e2&color=fff&size=128&rounded=true" alt="Sarah Johnson">
+        <div class="reviewer-name">Dhruv Dave</div>
+     
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Excellent experience with Techorses for my project. They delivered a stunning website that was not only visually appealing but also highly functional. The whole process was smooth and professional. I highly recommend Techorses for top-notch web design and development services."</div>
+    
+      </div>
+      
+      <!-- Additional review cards with same structure -->
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=SH&background=4a90e2&color=fff&size=128&rounded=true" alt="David Wilson">
+        <div class="reviewer-name">Sameera Hussain</div>
+   
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Work was professionally done according to our requirements and given on time. Thank you."</div>
+       
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=PD&background=4a90e2&color=fff&size=128&rounded=true" alt="Michael Chen">
+        <div class="reviewer-name">Parth Dhanekar</div>
+      
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Techorses did an amazing job on my graphic design project. The design was creative, and professional, and understood my vision perfectly. The final result was fantastic. Highly recommend!"</div>
+      
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=DM&background=4a90e2&color=fff&size=128&rounded=true" alt="Emily Rodriguez">
+        <div class="reviewer-name">Deven Mhatre</div>
+      
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"If you’re searching for a reliable, innovative, and one-stop solution IT company, look no further than Techorses. Their team of seasoned professionals consistently exceeds expectations, offering cutting-edge solutions and exceptional customer service."</div>
+       
+      </div>
+      
+      <div class="wheel__card">
+        <img class="review-avatar" src="https://ui-avatars.com/api/?name=SH&background=4a90e2&color=fff&size=128&rounded=true" alt="David Wilson">
+        <div class="reviewer-name">Sameera Hussain</div>
+        <!-- <div class="reviewer-title">Teacher</div> -->
+        <div class="review-rating">★★★★★</div>
+        <div class="review-content">"Work was professionally done according to our requirements and given on time. Thank you."</div>
+        <!-- <div class="review-date">Dec 5, 2022</div> -->
+      </div>
+      
+    </div>
+
+    <div class="testimonial-content">
+      <h2 class="section-title"> Hear From Our Clients!</h2>
+      <!-- <a href="#contact" class="btn2">Join Our Clients</a> -->
+    </div>
+  </section>
+
+
+      <!-- Services Section -->
+      <section id="services" class="services-section">
+        <div class="section-header">
+          <h2 class="section-title">Our Services</h2>
+          <!-- <p>Comprehensive solutions tailored to your business needs</p> -->
+        </div>
+        <div class="services-container">
+          <div class="services-menu">
+            <div class="services-list">
+              <div class="service-item active" data-service="graphic-design">
+                <div class="mini-preview">
+                  <img src="./assets/images/service.png" alt="Graphic Design">
+                </div>
+                <h3>Graphic Design</h3>
+                <!-- <p>Visual identity and branding</p> -->
+              </div>
+              <div class="service-item" data-service="web-development">
+                <div class="mini-preview">
+                  <img src="./assets/images/service.png" alt="Web Development">
+                </div>
+                <h3>Web Development</h3>
+                <!-- <p>Custom websites and web apps</p> -->
+              </div>
+              <div class="service-item" data-service="custom software Development">
+                <div class="mini-preview">
+                  <img src="./assets/images/service.png" alt="Web Development">
+                </div>
+                <h3>custom software Development</h3>
+                <!-- <p>Custom websites and web apps</p> -->
+              </div>
+              <div class="service-item" data-service="mobile-app">
+                <div class="mini-preview">
+                  <img src="./assets/images/service.png" alt="Mobile App">
+                </div>
+                <h3>Mobile App Development</h3>
+                <!-- <p>iOS and Android applications</p> -->
+              </div>
+              <div class="service-item" data-service="ui-ux">
+                <div class="mini-preview">
+                  <img src="./assets/images/service.png" alt="UI/UX Design">
+                </div>
+                <h3>UI/UX Design</h3>
+                <!-- <p>User-centered interfaces</p> -->
+              </div>
+              <div class="service-item" data-service="marketing">
+                <div class="mini-preview">
+                  <img src="./assets/images/service.png" alt="Marketing">
+                </div>
+                <h3>Marketing Solutions</h3>
+                <!-- <p>Digital marketing strategies</p> -->
+              </div>
+              
+            </div>
+          </div>
+          <div class="service-content">
+            <!-- Service details will appear here with animation -->
+            <div class="service-animation-container"></div>
+          </div>
+        </div>
+      </section>
+
+
+<!-- requiry -->
+
+  <div class="requiry">
+    <div class="header">
+        <h1 class="section-title">Inquiry?</h1>
+    </div>
+    
+    <div class="form-container">
+        <div class="info-section">
+          <span class="sparkle" style="top: 20%; left: 30%; animation-delay: 0s;"><i class="fa-regular fa-comment"></i></span>
+<span class="sparkle" style="top: 50%; left: 60%; animation-delay: 2s;"><i class="fa-regular fa-comment"></i></span>
+<span class="sparkle" style="top: 70%; left: 10%; animation-delay: 4s;"><i class="fa-regular fa-comment"></i></span>
+<span class="sparkle" style="top: 40%; left: 80%; animation-delay: 1s;"><i class="fa-regular fa-comment"></i></span>
+<span class="sparkle" style="top: 20%; left: 30%; animation-delay: 0s;"><i class="fa-regular fa-comment"></i></span>
+<span class="sparkle" style="top: 50%; left: 60%; animation-delay: 2s;"><i class="fa-regular fa-comment"></i></span>
+<span class="sparkle" style="top: 70%; left: 10%; animation-delay: 4s;"><i class="fa-regular fa-comment"></i></span>
+            <div class="contact-info">
+                <h3 class="touch1">Our Office</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>B-224, Samanvay Silicon,<br>
+                    Opp Kalyan Hotel,<br>
+                    Dairy Den Circle,<br>
+                    Sayajigunj, Vadodara – 390020<br>
+                    (Gujarat, India)</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+91 9328338281<br>+91 9725653603</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>sales@techorses.com<br>hey@techorses.com</p>
+                </div>
+            </div>
+            <img  src="./assets/images/inquiry.png" alt="Mini Icon" class="bottom-image" />
+        </div>
+        
+        <div class="form-section">
+            <form id="inquiryForm">
+              <h3 class="touch">Your Details</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" placeholder="Mobile Number" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" placeholder="Subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <textarea placeholder="Your Question or Comments" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Submit Inquiry</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+
+    <!-- FAQ Section -->
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <!-- Left Column (Top to Bottom) -->
+        <div class="faq-column left-column">
+            <div class="faq-content">
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>What sets Techorses apart from other digital agencies?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Techorses stands out for its commitment to innovation, client-centric approach, and multidisciplinary delivery of comprehensive digital solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>How can I track the progress of my project during development?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide regular updates and access to project management tools, ensuring transparency and collaboration throughout the development lifecycle.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-calendar-times"></i>
+                        <h3>Do you offer maintenance and support services after the project is completed?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We provide ongoing maintenance and support services to ensure your digital assets remain up-to-date and secure.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-key"></i>
+                        <h3>What is the cost structure for your services?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our pricing is tailored to the scope and complexity of each project. We provide detailed, transparent quotes to ensure clarity on costs.</p>
+                    </div>
+                </div>
+
+                <!-- Duplicate cards for seamless looping -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>What is the Techorses development process like?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our development process is collaborative and iterative, ensuring client involvement at key stages for feedback and adjustments.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>What sets Techorses apart from other digital agencies?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Techorses stands out for its commitment to innovation, client-centric approach, and multidisciplinary delivery of comprehensive digital solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-calendar-times"></i>
+                        <h3>How can I track the progress of my project during development?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide regular updates and access to project management tools, ensuring transparency and collaboration throughout the development lifecycle.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-key"></i>
+                        <h3>Do you offer maintenance and support services after the project is completed?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We provide ongoing maintenance and support services to ensure your digital assets remain up-to-date and secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column (Bottom to Top) -->
+        <div class="faq-column right-column">
+            <div class="faq-content">
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>What is the cost structure for your services?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our pricing is tailored to the scope and complexity of each project. We provide detailed, transparent quotes to ensure clarity on costs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>What is the Techorses development process like?
+                        </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our development process is collaborative and iterative, ensuring client involvement at key stages for feedback and adjustments.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-headset"></i>
+                        <h3>What support do you provide if issues arise after the project is completed?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our post-launch support includes troubleshooting, bug fixes, and ongoing assistance to address any issues that may arise, ensuring a smooth and reliable digital experience.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>What is the cost structure for your services?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our pricing is tailored to the scope and complexity of each project. We provide detailed, transparent quotes to ensure clarity on costs.</p>
+                    </div>
+                </div>
+
+                <!-- Duplicate cards for seamless looping -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>What sets Techorses apart from other digital agencies?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Techorses stands out for its commitment to innovation, client-centric approach, and multidisciplinary delivery of comprehensive digital solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>How can I track the progress of my project during development?
+                        </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide regular updates and access to project management tools, ensuring transparency and collaboration throughout the development lifecycle.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-headset"></i>
+                        <h3>Do you offer maintenance and support services after the project is completed?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We provide ongoing maintenance and support services to ensure your digital assets remain up-to-date and secure.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>What is the cost structure for your services?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our pricing is tailored to the scope and complexity of each project. We provide detailed, transparent quotes to ensure clarity on costs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+
+    
+    <div class="container">
+      <div class="floating-social-icons">
+        <div class="social-bubble">WELCOME</i>
+        </div>
+        <div class="social-bubble">HELLO</div>
+        <div class="social-bubble">TECHHORSES</div>
+        <div class="social-bubble">TH</div>
+        <div class="social-bubble">TECHORSES</div>
+        <div class="social-bubble">TH</i>
+        </div>
+        <div class="social-bubble">WELCOME</i>
+        </div>
+        <div class="social-bubble">HELLO</i>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-about">
+          <a href="#" class="footer-logo"><img src="./assets/images/THWHITE.webp" alt=""></a>
+          <p>Stay connected and join the digital conversation! Follow us on social media for the latest updates, tech insights, and creative inspirations. Let’s build a vibrant digital community together.</p>
+          <button class="btn0 btn-outline" id="footerClientBtn">+ Become a Client</button>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#"> GRAPHIC DESIGN</a></li>
+            <li><a href="#">WEB DEVELOPMENT</a></li>
+            <li><a href="#">MARKETING SOLUTION</a></li>
+            <li><a href="#">CUSTOM SOFTWARE DEVELOPMENT</a></li>
+            <li><a href="#">UI/UX DESIGN</a></li>
+            <li><a href="#">MOBILE APPLICATION DEVELOPMENT</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="#clients">COMPANY</a></li>
+            <li><a href="#testimonials">WORK</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#careers">CONTACT</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>hey@techorses.com <br/>
+            sales@techorses.com</p>
+          
+          <p>+91 9328338281 <br/>+91 9725653603</p>
+          <p> B-224, samanvay silicon,
+            opp kalyan hotel,
+            dairy den circle,
+            sayajigunj, Vadodara – 390020
+            (Gujarat, India)</p>
+          
+          <div class="social-links">
+            <a href="https://www.instagram.com/techorses_/#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/techorses-ride-the-technology/"><i class="fab fa-linkedin-in"></i></a>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">Copyright © 2025 Techorses, All rights reserved. Designed by Techorses.</p>
+        <div class="footer-links-bottom">
+          <a href="#">Privacy Policy</a>
+          <!-- <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a> -->
+        </div>
+      </div>
+    </div>
+            <!-- Go to Top Button -->
+  <button id="goToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  </footer>
+
+ <script src="./assets/js/script.js"></script>
+</body>
+</html>

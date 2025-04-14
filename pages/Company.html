@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/Company.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
+ 
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo">
+        <img src="../assets/images/th.png" alt="Logo">
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">Company</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="./pages/blog.html">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <button class="btn1 btn-outline" id="becomeClientBtn">+ Become a Client</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal" id="clientModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Hey! Tell us all the things</h3>
+      <form id="clientForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John from Apple">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="john@apple.com">
+        </div>
+        <div class="form-group">
+          <label for="message">Something about your great idea</label>
+          <textarea id="message" placeholder="Describe your project"></textarea>
+        </div>
+        <div class="form-group">
+          <p>Our Email: hey@techorses.com</p>
+        </div>
+        <button type="submit" class="btn1">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container1">
+     
+      <div class="hero-content">
+        
+        <h2>let's change the internet and regular businesses </h2>
+        <h2> to make a brighter tomorrow with</h2>
+        <h1>TECHORSES</h1>
+        
+      </div>
+      
+    </div>
+    
+    <!-- <div class="scroll-down">
+      <span>Scroll Down</span>
+      <div class="mouse"></div>
+    </div> -->
+  
+    <!-- Sticky left contact button -->
+    <div class="sticky-left">
+      <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="contact-btn" data-tooltip="Contact Us">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="whatsapp-btn" data-tooltip="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  
+    <!-- Sticky right social links -->
+    <div class="sticky-right">
+      <a href="https://www.linkedin.com/company/techorses-ride-the-technology/" class="social-link linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.instagram.com/techorses_/#" class="social-link instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+      <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL" class="social-link facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Techorses Team">
+        </div>
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p  class="parag"><span class="highlight">Techorses</span> is a group of digital experts who love creating great online experiences.</p>
+            <p class="para">We use innovation and creativity to bring your ideas to life. This includes developing websites, mobile apps, software, marketing solutions, graphic design, and user-friendly interfaces for both web and mobile platforms.</p>
+            
+            
+        </div>
+    </div>
+</section>
+
+<!-- point -->
+<section class="points-section">
+  <div class="container">
+    <!-- <h2>Our Platforms</h2> -->
+    <ul>
+      <li><i class="fas fa-rocket"></i> We are a leading tech company that offers a range of cutting-edge technology solutions.</li>
+      <li><i class="fas fa-code"></i> Our services include web and mobile development, user-friendly design, customized software, and effective digital marketing.</li>
+      <li><i class="fas fa-globe"></i> Techorses is your one-stop solution for all your digital needs.</li>
+      <li><i class="fas fa-star"></i> We create great experiences that go above and beyond.</li>
+      <li><i class="fas fa-lightbulb"></i> At Techorses, we don't just follow trends, we create them.</li>
+      <li><i class="fas fa-users-cog"></i> Our dedicated team works hard to provide innovative solutions that meet and surpass the changing demands of businesses.</li>
+      <li><i class="fas fa-handshake"></i> Let's work together to shape the digital world. Your journey to digital success starts here.</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- vision-mission -->
+<section class="vision-mission">
+  <div class="cards-container">
+    <div class="card vision-card">
+        <div class="card-content">
+          <div class="card-icon">
+            <i class="fas fa-binoculars"></i>
+        </div>
+            <h2>Our Vision</h2>
+            <p>To be a globally recognized leader in innovative solutions that transform industries and improve lives through cutting-edge technology and sustainable practices.</p>
+        </div>
+    </div>
+    
+    <div class="card mission-card">
+        <div class="card-content">
+          <div class="card-icon">
+            <i class="fas fa-bullseye"></i>
+        </div>
+            <h2>Our Mission</h2>
+            <p>To deliver exceptional value to our customers by providing high-quality products and services, fostering a culture of innovation, and making a positive impact on our communities and the environment.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- our value -->
+<section class="main-section">
+  <!-- Our Value Section -->
+  <div class="our-value-section">
+      <h1>Our Values</h1>
+      <p class="subtitle">Our values lead us to do great work by working together, being honest, and always coming up with new ideas.</p>
+      
+      <!-- Value Cards Container -->
+      <div class="value-cards">
+          <!-- Card 1 -->
+          <div class="value-card">
+              <div class="card-icon">
+                  <i class="fas fa-users"></i>
+              </div>
+              <div class="card-content">
+                  <p>We believe in the power of collaboration and teamwork to achieve extraordinary results.</p>
+                  <h3>Collaboration</h3>
+              </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="value-card">
+              <div class="card-icon">
+                  <i class="fas fa-gem"></i>
+              </div>
+              <div class="card-content">
+                  <p>Integrity is at the core of everything we do, building trust with our clients and team.</p>
+                  <h3>Integrity</h3>
+              </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="value-card">
+              <div class="card-icon">
+                  <i class="fas fa-lightbulb"></i>
+              </div>
+              <div class="card-content">
+                  <p>We constantly push boundaries and explore new possibilities to drive innovation.</p>
+                  <h3>Innovation</h3>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- COUNT -->
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stat-item" data-target="20">
+      <div class="stat-number"><span class="count">0</span><span class="plus-icon">+</span></div>
+      <div class="line-container"><div class="animated-line"></div></div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+
+    <div class="stat-item" data-target="35">
+      <div class="stat-number"><span class="count">0</span><span class="plus-icon">+</span></div>
+      <div class="line-container"><div class="animated-line"></div></div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+
+    <div class="stat-item" data-target="23">
+      <div class="stat-number"><span class="count">0</span><span class="plus-icon">+</span></div>
+      <div class="line-container"><div class="animated-line"></div></div>
+      <div class="stat-label">Team Members</div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FEATURES -->
+ <section class="features-section">
+  <div class="features-header">
+    <h1>Features</h1>
+    <p>Discover a world of digital progress for an active online presence.</p>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- 6 Features -->
+      <div class="feature-card">💡 INNOVATIVE SOLUTIONS</div>
+      <div class="feature-card">💰 COST-EFFECTIVE</div>
+      <div class="feature-card">📢 TRANSPARENT COMMUNICATION</div>
+      <div class="feature-card">🏆 TOP-NOTCH SERVICES STANDARD</div>
+      <div class="feature-card">📱 RESPONSIVE AND RESPONSIBLE</div>
+      <div class="feature-card">♾️ LIFELONG SUPPORT</div>
+
+      <!-- Duplicates for seamless looping -->
+      <div class="feature-card">💡 INNOVATIVE SOLUTIONS</div>
+      <div class="feature-card">💰 COST-EFFECTIVE</div>
+      <div class="feature-card">📢 TRANSPARENT COMMUNICATION</div>
+      <div class="feature-card">🏆 TOP-NOTCH SERVICES STANDARD</div>
+      <div class="feature-card">📱 RESPONSIVE AND RESPONSIBLE</div>
+      <div class="feature-card">♾️ LIFELONG SUPPORT</div>
+    </div>
+  </div>
+</section> 
+
+
+ <!-- Footer -->
+ <footer class="footer" id="contact">
+
+    
+  <div class="container">
+    <div class="floating-social-icons">
+      <div class="social-bubble">WELCOME</i>
+      </div>
+      <div class="social-bubble">HELLO</div>
+      <div class="social-bubble">TECHHORSES</div>
+      <div class="social-bubble">TH</div>
+      <div class="social-bubble">TECHORSES</div>
+      <div class="social-bubble">TH</i>
+      </div>
+      <div class="social-bubble">WELCOME</i>
+      </div>
+      <div class="social-bubble">HELLO</i>
+      </div>
+    </div>
+    <div class="footer-container">
+      <div class="footer-about">
+        <a href="#" class="footer-logo"><img src="../assets/images/THWHITE.webp" alt=""></a>
+        <p>Stay connected and join the digital conversation! Follow us on social media for the latest updates, tech insights, and creative inspirations. Let’s build a vibrant digital community together.</p>
+        <button class="btn0 btn-outline" id="footerClientBtn">+ Become a Client</button>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#"> GRAPHIC DESIGN</a></li>
+          <li><a href="#">WEB DEVELOPMENT</a></li>
+          <li><a href="#">MARKETING SOLUTION</a></li>
+          <li><a href="#">CUSTOM SOFTWARE DEVELOPMENT</a></li>
+          <li><a href="#">UI/UX DESIGN</a></li>
+          <li><a href="#">MOBILE APPLICATION DEVELOPMENT</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="#clients">COMPANY</a></li>
+          <li><a href="#testimonials">WORK</a></li>
+          <li><a href="#blog">BLOG</a></li>
+          <li><a href="#careers">CONTACT</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>hey@techorses.com <br/>
+          sales@techorses.com</p>
+        
+        <p>+91 9328338281 <br/>+91 9725653603</p>
+        <p> B-224, samanvay silicon,
+          opp kalyan hotel,
+          dairy den circle,
+          sayajigunj, Vadodara – 390020
+          (Gujarat, India)</p>
+        
+        <div class="social-links">
+          <a href="https://www.instagram.com/techorses_/#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/techorses-ride-the-technology/"><i class="fab fa-linkedin-in"></i></a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">Copyright © 2025 Techorses, All rights reserved. Designed by Techorses.</p>
+      <div class="footer-links-bottom">
+        <a href="#">Privacy Policy</a>
+        <!-- <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a> -->
+      </div>
+    </div>
+  </div>
+          <!-- Go to Top Button -->
+<button id="goToTopBtn" title="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+</footer>
+
+ <script src="../assets/js/Company.js"></script>
+</body>
+</html>

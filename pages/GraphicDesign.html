@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/GraphicDesign.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+  <title>Document</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <a href="#" class="logo">
+          <img src="../assets/images/th.png" alt="Logo">
+        </a>
+        
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="../pages/Company.html">Company</a></li>
+          <li class="services-dropdown">
+            <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+            <div class="services-mega-menu">
+              <div class="services-track-container">
+                <div class="services-track">
+                  <a href="../pages/GraphicDesign.html" class="service-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb')"></div>
+                    <div class="card-content">
+                     
+                      <h3>Graphic Design</h3>
+                    </div>
+                  </a>
+                  <a href="../pages/mobileApp.html" class="service-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6')"></div>
+                    <div class="card-content">
+                     
+                      <h3>Mobile App Development</h3>
+                    </div>
+                  </a>
+                  <a href="/service/web-dev" class="service-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d')"></div>
+                    <div class="card-content">
+                     
+                      <h3>Web Development</h3>
+                    </div>
+                  </a>
+                  <a href="/service/ui-ux" class="service-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1541462608143-67571c6738dd')"></div>
+                    <div class="card-content">
+                
+                      <h3>UI/UX Design</h3>
+                    </div>
+                  </a>
+                  <a href="/service/marketing" class="service-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093')"></div>
+                    <div class="card-content">
+                   
+                      <h3>Marketing Solutions</h3>
+                    </div>
+                  </a>
+                  <a href="/service/custom-software" class="service-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71')"></div>
+                    <div class="card-content">
+                   
+                      <h3>Custom Software</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="./pages/blog.html">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <button class="btn1 btn-outline" id="becomeClientBtn">+ Become a Client</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  
+    <!-- Modal -->
+    <div class="modal" id="clientModal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h3>Hey! Tell us all the things</h3>
+        <form id="clientForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John from Apple">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="john@apple.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Something about your great idea</label>
+            <textarea id="message" placeholder="Describe your project"></textarea>
+          </div>
+          <div class="form-group">
+            <p>Our Email: hey@techorses.com</p>
+          </div>
+          <button type="submit" class="btn1">Submit</button>
+        </form>
+      </div>
+    </div>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>GRAPHIC DESIGN</h1>
+        <p>Techorses Designs can help your business look its best.</p>
+        <ul class="hero-points">
+          <li>➤ Unique and Creative Graphic Design Services for Businesses.</li>
+          <li>➤ Tailored for A Diverse Range of Clients.</li>
+          <li>➤ High-Quality Graphics to Elevate your Brand Image.</li>
+        </ul>
+        <h3>Want to boost your brand and leave a lasting impact?</h3>
+        
+        <p>TECHORSES Graphic Design is here to help! Our design wizards craft eye-catching graphics that’ll make your business shine. From logos to website designs, we’ll give you top-quality graphics that are perfect for your brand. With Techorses, you’re guaranteed amazing designs, creativity, and a professional touch. Upgrade your brand with Techorses Graphic Design today!</p>
+        
+      </div>
+      <img class="hero-img" src="./assets/images/HERO.png" alt="IT Solutions">
+    </div>
+    
+    <div class="scroll-down">
+      <span>Scroll Down</span>
+      <div class="mouse"></div>
+    </div>
+  
+    <!-- Sticky left contact button -->
+    <div class="sticky-left">
+      <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="contact-btn" data-tooltip="Contact Us">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="whatsapp-btn" data-tooltip="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  
+    <!-- Sticky right social links -->
+    <div class="sticky-right">
+      <a href="https://www.linkedin.com/company/techorses-ride-the-technology/" class="social-link linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.instagram.com/techorses_/#" class="social-link instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+      <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL" class="social-link facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      
+    </div>
+  </section>
+
+  <section class="main-header"><h1>What We Provide?</h1></section>
+
+  <section class="graphic-design-services" id="services">
+    <div class="design-timeline">
+      <!-- Timeline connector -->
+      <div class="timeline-line"></div>
+      
+      <!-- Service 1 - Logo Design -->
+      <div class="service-block odd">
+        <div class="service-content">
+          <h1>Logo Design</h1>
+          <p>Boost your brand with Techorses' one-of-a-kind logo designs. Our top designers will team up with you to create a logo that shows off your brand's style and what you stand for. Get a logo made by pros that shows off your business perfectly and makes you stand out.</p>
+          <button class="service-btn">Elevate Your Brand Image with A Professional Logo</button>
+        </div>
+        <div class="service-animation">
+          <div class="logo-animation">
+            <div class="logo-shape shape1"></div>
+            <div class="logo-shape shape2"></div>
+            <div class="logo-shape shape3"></div>
+            <div class="logo-preview">
+              <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7" alt="Logo Design Examples">
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      
+      <!-- Service 2 - Website Mockups -->
+      <div class="service-block even">
+        <div class="service-animation">
+          <div class="mockup-animation">
+            <div class="browser-window">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="browser-content">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166" alt="Website Mockup">
+              </div>
+            </div>
+            <div class="floating-elements">
+              <div class="float-element el1"></div>
+              <div class="float-element el2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h1>Website Mockups</h1>
+          <p>Create a great online presence with a pro website mockup from Techorses. Our designers will build a stunning mockup that will capture your brand and engage your website visitors. Impress your audience with a website that is both visually appealing and user-friendly.</p>
+          <button class="service-btn">Get a Custom Website Mockup from Techorses</button>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      
+      <!-- Service 3 - Social Media Graphics -->
+      <div class="service-block odd">
+        <div class="service-content">
+          <h1>Social Media Graphics</h1>
+          <p>Upgrade your social media game with stunning graphics from Techorses. Our design wizards will craft captivating visuals that turn heads and boost engagement on your feeds. Stand out with top-notch graphics that match your brand's vibe and leave a lasting mark on your followers.</p>
+          <button class="service-btn">Elevate Your Social Media Graphics with Professional Graphics</button>
+        </div>
+        <div class="service-animation">
+          <div class="social-animation">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="social-post">
+                  <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0" alt="Social Media Post">
+                </div>
+              </div>
+            </div>
+            <div class="social-icons">
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-linkedin"></i>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      
+      <!-- Service 4 - Packaging & Branding -->
+      <div class="service-block even">
+        <div class="service-animation">
+          <div class="packaging-animation">
+            <div class="package-box">
+              <div class="package-face front">
+                <img src="https://images.unsplash.com/photo-1604176354204-9268737828e4" alt="Packaging Design">
+              </div>
+              <div class="package-face side"></div>
+              <div class="package-face top"></div>
+            </div>
+            <div class="floating-tags">
+              <span>Branding</span>
+              <span>Packaging</span>
+              <span>Identity</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h1>Packaging & Branding</h1>
+          <p>Improve your brand with TECHORSES packaging and branding services. We create unique packaging designs and establish a strong brand image to help your brand shine in the market.</p>
+          <button class="service-btn">Get a Custom Packaging Design</button>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      
+      <!-- Service 5 - Marketing Materials -->
+      <div class="service-block odd">
+        <div class="service-content">
+          <h1>Marketing Materials</h1>
+          <p>If you need printed materials like brochures, booklets, flyers, company profiles, catalogs, or business cards, or anything, TECHORSES can help. Our marketing materials are created to attract your ideal customers and make a lasting impact. Our expert designs will present your brand in the best possible way.</p>
+          <button class="service-btn">Boost Your Marketing Materials Today!</button>
+        </div>
+        <div class="service-animation">
+          <div class="marketing-animation">
+            <div class="marketing-materials">
+              <div class="material flyer">
+                <img src="https://images.unsplash.com/photo-1545231027-637d2f6210f8" alt="Flyer Design">
+              </div>
+              <div class="material brochure">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4" alt="Brochure Design">
+              </div>
+              <div class="material business-card">
+                <img src="https://images.unsplash.com/photo-1579273166152-d725a4e2b755" alt="Business Card">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      
+      <!-- Service 6 - Video Editing -->
+      <div class="service-block even">
+        <div class="service-animation">
+          <div class="video-animation">
+            <div class="video-player">
+              <div class="video-screen">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-controls">
+                <div class="timeline-bar"></div>
+                <div class="control-buttons">
+                  <i class="fas fa-volume-up"></i>
+                  <i class="fas fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="video-tags">
+              <span>Editing</span>
+              <span>Motion Graphics</span>
+              <span>Effects</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h1>Video Editing</h1>
+          <p>Our team can help make your content stand out with our video editing services. Whether you want to make promotional videos or enhance existing footage, we're here to help you share your story in an engaging way.</p>
+          <button class="service-btn">Contact Us for Professional Video Editing</button>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+    </div>
+  </section>
+
+
+     <!-- Footer -->
+ <footer class="footer" id="contact">
+
+    
+  <div class="container">
+    <div class="floating-social-icons">
+      <div class="social-bubble">WELCOME</i>
+      </div>
+      <div class="social-bubble">HELLO</div>
+      <div class="social-bubble">TECHHORSES</div>
+      <div class="social-bubble">TH</div>
+      <div class="social-bubble">TECHORSES</div>
+      <div class="social-bubble">TH</i>
+      </div>
+      <div class="social-bubble">WELCOME</i>
+      </div>
+      <div class="social-bubble">HELLO</i>
+      </div>
+    </div>
+    <div class="footer-container">
+      <div class="footer-about">
+        <a href="#" class="footer-logo"><img src="../assets/images/THWHITE.webp" alt=""></a>
+        <p>Stay connected and join the digital conversation! Follow us on social media for the latest updates, tech insights, and creative inspirations. Let’s build a vibrant digital community together.</p>
+        <button class="btn0 btn-outline" id="footerClientBtn">+ Become a Client</button>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#"> GRAPHIC DESIGN</a></li>
+          <li><a href="#">WEB DEVELOPMENT</a></li>
+          <li><a href="#">MARKETING SOLUTION</a></li>
+          <li><a href="#">CUSTOM SOFTWARE DEVELOPMENT</a></li>
+          <li><a href="#">UI/UX DESIGN</a></li>
+          <li><a href="#">MOBILE APPLICATION DEVELOPMENT</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="#clients">COMPANY</a></li>
+          <li><a href="#testimonials">WORK</a></li>
+          <li><a href="#blog">BLOG</a></li>
+          <li><a href="#careers">CONTACT</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>hey@techorses.com <br/>
+          sales@techorses.com</p>
+        
+        <p>+91 9328338281 <br/>+91 9725653603</p>
+        <p> B-224, samanvay silicon,
+          opp kalyan hotel,
+          dairy den circle,
+          sayajigunj, Vadodara – 390020
+          (Gujarat, India)</p>
+        
+        <div class="social-links">
+          <a href="https://www.instagram.com/techorses_/#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/techorses-ride-the-technology/"><i class="fab fa-linkedin-in"></i></a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">Copyright © 2025 Techorses, All rights reserved. Designed by Techorses.</p>
+      <div class="footer-links-bottom">
+        <a href="#">Privacy Policy</a>
+        <!-- <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a> -->
+      </div>
+    </div>
+  </div>
+          <!-- Go to Top Button -->
+<button id="goToTopBtn" title="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+</footer>
+
+
+<script src="../assets/js/GraphicDesign.js"></script>
+</body>
+</html>

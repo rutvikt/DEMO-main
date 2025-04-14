@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/mobileApp.css">
+  <title>Document</title>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo">
+        <img src="../assets/images/th.png" alt="Logo">
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="../pages/Company.html">Company</a></li>
+        <li class="services-dropdown">
+          <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="services-mega-menu">
+            <div class="services-track-container">
+              <div class="services-track">
+                <a href="../pages/GraphicDesign.html" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb')"></div>
+                  <div class="card-content">
+                   
+                    <h3>Graphic Design</h3>
+                  </div>
+                </a>
+                <a href="../pages/mobileApp.html" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6')"></div>
+                  <div class="card-content">
+                   
+                    <h3>Mobile App Development</h3>
+                  </div>
+                </a>
+                <a href="../pages/webDevlopment.html" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d')"></div>
+                  <div class="card-content">
+                   
+                    <h3>Web Development</h3>
+                  </div>
+                </a>
+                <a href="./uiUxDesign.html" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1541462608143-67571c6738dd')"></div>
+                  <div class="card-content">
+              
+                    <h3>UI/UX Design</h3>
+                  </div>
+                </a>
+                <a href="/service/marketing" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093')"></div>
+                  <div class="card-content">
+                 
+                    <h3>Marketing Solutions</h3>
+                  </div>
+                </a>
+                <a href="/service/custom-software" class="service-card">
+                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71')"></div>
+                  <div class="card-content">
+                 
+                    <h3>Custom Software</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="./pages/blog.html">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <button class="btn1 btn-outline" id="becomeClientBtn">+ Become a Client</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal" id="clientModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Hey! Tell us all the things</h3>
+      <form id="clientForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John from Apple">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="john@apple.com">
+        </div>
+        <div class="form-group">
+          <label for="message">Something about your great idea</label>
+          <textarea id="message" placeholder="Describe your project"></textarea>
+        </div>
+        <div class="form-group">
+          <p>Our Email: hey@techorses.com</p>
+        </div>
+        <button type="submit" class="btn1">Submit</button>
+      </form>
+    </div>
+  </div>
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>MOBILE APP DEVELOPMENT</h1>
+      <p>Techorses Designs can help your business look its best.</p>
+      <ul class="hero-points">
+        <li>➤ Unique and Creative Graphic Design Services for Businesses.</li>
+        <li>➤ Tailored for A Diverse Range of Clients.</li>
+        <li>➤ High-Quality Graphics to Elevate your Brand Image.</li>
+      </ul>
+      <h3>Want to boost your brand and leave a lasting impact?</h3>
+      
+      <p>TECHORSES Graphic Design is here to help! Our design wizards craft eye-catching graphics that’ll make your business shine. From logos to website designs, we’ll give you top-quality graphics that are perfect for your brand. With Techorses, you’re guaranteed amazing designs, creativity, and a professional touch. Upgrade your brand with Techorses Graphic Design today!</p>
+      
+    </div>
+    <img class="hero-img" src="./assets/images/HERO.png" alt="IT Solutions">
+  </div>
+  
+  <div class="scroll-down">
+    <span>Scroll Down</span>
+    <div class="mouse"></div>
+  </div>
+
+  <!-- Sticky left contact button -->
+  <div class="sticky-left">
+    <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="contact-btn" data-tooltip="Contact Us">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="whatsapp-btn" data-tooltip="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Sticky right social links -->
+  <div class="sticky-right">
+    <a href="https://www.linkedin.com/company/techorses-ride-the-technology/" class="social-link linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.instagram.com/techorses_/#" class="social-link instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    
+    <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL" class="social-link facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    
+  </div>
+</section>
+
+<section class="main-header"><h1>What We Provide?</h1></section>
+
+    <!-- Services Timeline -->
+    <section class="services-timeline" id="services">
+      <div class="container">
+          <div class="timeline-container">
+              <div class="timeline-line"></div>
+              
+              <!-- Service 1 -->
+              <div class="service-section">
+                  <div class="service-content">
+                      <h1>Custom App Development</h1>
+                      <p>With TECHORSES, you get personalized app development that fits your business requirements. Our skilled developers make sure your app shines in the busy online market, giving you a special way to connect with your customers.</p>
+                      <button class="service-btn">Get Your Custom App Today</button>
+                  </div>
+                  <div class="service-image">
+                      <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Custom App Development">
+                  </div>
+                  <div class="timeline-dot" style="top: 50%;"></div>
+              </div>
+              
+              <!-- Service 2 -->
+              <div class="service-section">
+                  <div class="service-content">
+                      <h1>Cross-Platform Compatibility</h1>
+                      <p>TECHORSES helps your app reach more people by making sure it works on different platforms. This way, you can connect with a lot of different customers and grow your business.</p>
+                      <button class="service-btn">Improve Your App's Accessibility Now</button>
+                  </div>
+                  <div class="service-image">
+                      <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Cross-Platform Compatibility">
+                  </div>
+                  <div class="timeline-dot" style="top: 50%;"></div>
+              </div>
+              
+              <!-- Service 3 -->
+              <div class="service-section">
+                  <div class="service-content">
+                      <h1>User-Centric Design</h1>
+                      <p>Our design services focus on creating easy-to-use interfaces that make your app enjoyable to use. By putting users first, we make sure your app looks great and works well, keeping customers coming back.</p>
+                      <button class="service-btn">Create Engaging Mobile Experiences</button>
+                  </div>
+                  <div class="service-image">
+                      <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="User-Centric Design">
+                  </div>
+                  <div class="timeline-dot" style="top: 50%;"></div>
+              </div>
+              
+              <!-- Service 4 -->
+              <div class="service-section">
+                  <div class="service-content">
+                      <h1>Mobile App Analytics</h1>
+                      <p>TECHORSES helps your app reach more people by making sure it works on different platforms. This way, you can connect with a lot of different customers and grow your business.</p>
+                      <button class="service-btn">Improve Your App's Accessibility Now</button>
+                  </div>
+                  <div class="service-image">
+                      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Mobile App Analytics">
+                  </div>
+                  <div class="timeline-dot" style="top: 50%;"></div>
+              </div>
+              
+              <!-- Service 5 -->
+              <div class="service-section">
+                  <div class="service-content">
+                      <h1>App Store Optimization</h1>
+                      <p>Boost your app's visibility and downloads using smart app store optimization techniques to improve rankings and attract more users.</p>
+                      <button class="service-btn">Increase App Downloads Now</button>
+                  </div>
+                  <div class="service-image">
+                      <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="App Store Optimization">
+                  </div>
+                  <div class="timeline-dot" style="top: 50%;"></div>
+              </div>
+              
+              <!-- Service 6 -->
+              <div class="service-section">
+                  <div class="service-content">
+                      <h1>App Maintenance and Support</h1>
+                      <p>Keep your app running smoothly and up-to-date with our ongoing maintenance and support services. Stay competitive in the market with our help.</p>
+                      <button class="service-btn">Stay Competitive with App Support</button>
+                  </div>
+                  <div class="service-image">
+                      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="App Maintenance and Support">
+                  </div>
+                  <div class="timeline-dot" style="top: 50%;"></div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+
+    
+      <div class="container">
+        <div class="floating-social-icons">
+          <div class="social-bubble">WELCOME</i>
+          </div>
+          <div class="social-bubble">HELLO</div>
+          <div class="social-bubble">TECHHORSES</div>
+          <div class="social-bubble">TH</div>
+          <div class="social-bubble">TECHORSES</div>
+          <div class="social-bubble">TH</i>
+          </div>
+          <div class="social-bubble">WELCOME</i>
+          </div>
+          <div class="social-bubble">HELLO</i>
+          </div>
+        </div>
+        <div class="footer-container">
+          <div class="footer-about">
+            <a href="#" class="footer-logo"><img src="../assets/images/THWHITE.webp" alt=""></a>
+            <p>Stay connected and join the digital conversation! Follow us on social media for the latest updates, tech insights, and creative inspirations. Let’s build a vibrant digital community together.</p>
+            <button class="btn0 btn-outline" id="footerClientBtn">+ Become a Client</button>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#"> GRAPHIC DESIGN</a></li>
+              <li><a href="#">WEB DEVELOPMENT</a></li>
+              <li><a href="#">MARKETING SOLUTION</a></li>
+              <li><a href="#">CUSTOM SOFTWARE DEVELOPMENT</a></li>
+              <li><a href="#">UI/UX DESIGN</a></li>
+              <li><a href="#">MOBILE APPLICATION DEVELOPMENT</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Menu</h3>
+            <ul>
+              <li><a href="/">HOME</a></li>
+              <li><a href="#clients">COMPANY</a></li>
+              <li><a href="#testimonials">WORK</a></li>
+              <li><a href="#blog">BLOG</a></li>
+              <li><a href="#careers">CONTACT</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>hey@techorses.com <br/>
+              sales@techorses.com</p>
+            
+            <p>+91 9328338281 <br/>+91 9725653603</p>
+            <p> B-224, samanvay silicon,
+              opp kalyan hotel,
+              dairy den circle,
+              sayajigunj, Vadodara – 390020
+              (Gujarat, India)</p>
+            
+            <div class="social-links">
+              <a href="https://www.instagram.com/techorses_/#"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/company/techorses-ride-the-technology/"><i class="fab fa-linkedin-in"></i></a>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p class="copyright">Copyright © 2025 Techorses, All rights reserved. Designed by Techorses.</p>
+          <div class="footer-links-bottom">
+            <a href="#">Privacy Policy</a>
+            <!-- <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a> -->
+          </div>
+        </div>
+      </div>
+              <!-- Go to Top Button -->
+    <button id="goToTopBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    </footer>
+
+
+  <script src="../assets/js/mobileApp.js"></script>
+</body>
+</html>
