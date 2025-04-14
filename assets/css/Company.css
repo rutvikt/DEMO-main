@@ -2775,13 +2775,13 @@ p {
   }
   .card-content h2{
     margin-top: -8vh;
-    margin-left: -12vh;
+    margin-left: -2vh;
   }
   .card-content .card-icon{
    margin-left: -3.5vh;
     top: -3vh;
-    height: auto;
-    width: 62px;
+    height: 6px;
+    width: 6px;
   }
 
   .main-section{
