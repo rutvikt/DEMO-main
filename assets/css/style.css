@@ -836,27 +836,28 @@ p {
   .hero-content {
     max-width: 1700px;
     width: 100%;
+    max-width: 1300px;
     text-align: left;
-    margin-top: 9vh;
+  
     padding-bottom: 4vh;
   }
 
   .hero h1 {
     font-size: 2.4rem;
-    width: auto;
+    width: 50vh;
     margin: 1rem 0;
   }
 
   .hero h3,
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .hero-img {
     position: relative;
-    width: 60%;
-    right: -4vh;
-    top: 30vh;
+    width: 50%;
+    right: 20vh;
+    top: 27vh;
     max-width: 500px;
     height: auto;
     margin: 0 auto;
@@ -1192,8 +1193,7 @@ p {
   height: 25vh;
 }
       .hero-content {
-     
-       
+        margin: 0;
         padding: 0 30px;
         justify-content: left;
         width: 90%;
@@ -2063,7 +2063,7 @@ overflow: hidden;
 
 }
 .nav-links{
-  left: 15vh;
+  left: 16vh;
   width: 40vh;
   height: 4vh;
 }
@@ -2506,6 +2506,7 @@ overflow: hidden;
   .services-container {
     max-width: 1400px;
     gap: 3rem;
+   
   }
   
   @media (min-width:1350px) {
@@ -2576,14 +2577,14 @@ overflow: hidden;
         height: 130%;
       }
       .services-section{
-        height: 910%;
+        /* height: 910%; */
       }
 
 
 
       .service-details.active{
-        top: -5%;
-        height: 110%;
+        top: 0%;
+        height: 71%;
       }
     }
     
@@ -3665,7 +3666,7 @@ overflow: hidden;
   } */
 
   .requiry{
-    margin: -25vh 0;
+    margin: -20vh 0;
   }
 
    .info-section .bottom-image{
