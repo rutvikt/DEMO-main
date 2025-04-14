@@ -423,7 +423,7 @@ p {
   min-height: 600px;
   max-height: 1200px;
   margin: 2vh 3%;
-  top: -10vh;
+  top: -12vh;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, rgb(225, 234, 251) 0%, rgb(212, 225, 239) 100%);
