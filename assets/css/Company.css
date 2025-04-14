@@ -420,6 +420,7 @@ p {
 .hero {
   height: 95vh;
   display: flex;
+ 
   min-height: 600px;
   max-height: 1200px;
   margin: 2vh 3%;
