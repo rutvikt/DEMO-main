@@ -420,19 +420,30 @@ p {
 
 @media (min-width: 1400px) {
   .navbar-container {
-    padding: 0 8%;
+    padding: 0 7%;
   }
   .nav-links{
     left: 31%;
   }
+
   .logo img {
     height: 55px;
   }
 }
 
+@media (min-width: 1600px) {
+  .navbar-container {
+    padding: 0 7%;
+  }
+  .nav-links{
+    left: 25%;
+  }
+
+}
+
 @media (min-width: 1920px) {
   .navbar-container {
-    padding: 0 12%;
+    padding: 0 7%;
  
   }
   .nav-links{
@@ -707,6 +718,9 @@ p {
   .hero p {
     font-size: 1.3rem;
   }
+  .sticky-left{
+    margin-bottom: 14vh;
+  }
   
   .hero-img {
     right: 1%;
@@ -720,6 +734,11 @@ p {
     width: 70%;
     
   }
+
+  .sticky-left{
+    margin-bottom: 14vh;
+  }
+
   
   .hero h1 {
     font-size: 3.5rem;
@@ -727,8 +746,8 @@ p {
   
   .hero-img {
     right: 1%;
-    height: 90%;
-    top: 65%;
+    height: 80%;
+    top: 55%;
   }
 }
 
@@ -736,7 +755,10 @@ p {
   .hero-content {
     max-width: 100%;
   }
-  
+  /* .sticky-left{
+    margin-bottom: 20vh;
+  } */
+
   .hero h1 {
     font-size: 4rem;
   }
@@ -759,6 +781,10 @@ p {
 
   .hero{
     top: -100px;
+  }
+
+  .sticky-left{
+    margin-bottom: 24vh;
   }
 
   .hero-content {
@@ -784,12 +810,15 @@ p {
 
 @media (min-width: 2700px) {
   .hero{
-    top: -11rem;
+    top: -10rem;
   }
   .container {
-    max-width: 3000px;
+    max-width: 2500px;
   }
   
+  .sticky-left{
+    margin-bottom: 34vh;
+  }
   .hero-content {
     max-width: 1300px;
     margin-left: -10vh;
@@ -993,7 +1022,7 @@ p {
   position: fixed;
   right: 30px;
   
-  bottom: 280px;
+  /* bottom: 280px; */
   z-index: 10;
   
   opacity: 0;
@@ -1003,7 +1032,7 @@ p {
 .sticky-right {
   position: fixed;
   left: 30px;
-  top: 40%;
+  /* top: 40%; */
   transform: translateY(-50%);
   z-index: 10;
   display: flex;
