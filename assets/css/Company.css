@@ -1291,7 +1291,7 @@ p {
   height: 60px;
   background: #93beff;
   border-radius: 50%;
-  margin: 0px auto 30px -5%;
+  margin: 0px auto 10px -2%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1372,12 +1372,14 @@ p {
     padding: 3rem 3.5rem;
   }
   .card-content .card-icon{
-    left: -6%;
+    left: -8%;
     top: -9%;
   }
   
   .card h2 {
+  margin-top: -17%;
     font-size: 2.25rem;
+    margin-left: -55%;
   }
   
   .card p {
@@ -1414,8 +1416,13 @@ p {
     max-width: 700px;
     padding: 4.5rem 4rem;
   }
+  .card-content .card-icon{
+    left: -4%;
+    top: -24%;
+  }
+  
   .card h2 {
-    margin-top: -27%;
+    margin-top: -20%;
     font-size: 2.75rem;
     padding-left: 10%;
   }
@@ -2044,7 +2051,7 @@ p {
   text-align: center;
   position: relative;
   overflow: hidden;
-  height: 45vh;
+  height: 49vh;
   border-radius: 10vh;
  background-color: #e2eeff;
  margin: 0 3vh 3vh 3vh;
@@ -2200,13 +2207,14 @@ p {
   flex-direction: column;
   min-height: 400px;
   max-height: 600px;
+  
 }
 
 
 .footer-container {
   display: grid;
   width: 100%;
-  max-width: 1800px;
+  max-width: 2800px;
   margin: 0 auto;
   padding: 0 5%;
   flex-grow: 1;
@@ -2661,11 +2669,12 @@ p {
 }
 
 .hero-content{
-  margin-left: 3vh;
+  margin-left: 1vh;
+  width: 120%;
 }
 .hero-content h1{
   margin-top: 3vh;
-  margin-left: 3vh;
+  /* margin-left: 0vh; */
 }
 
   .about-container,
@@ -2834,19 +2843,6 @@ p {
 
 /* RESPONSIVE */
 
-/* Add these media queries to your existing CSS */
-
-/* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) {
-  .navbar-container {
-    padding: 0 40px;
-  }
-  
-  .hero-content {
-    padding: 0 80px;
-   margin-left:2%;
-  }
-} */
 
 /* Medium devices (tablets, 768px to 991px) */
 @media (max-width: 991px) {
