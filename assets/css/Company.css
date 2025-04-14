@@ -892,7 +892,7 @@ p {
     @media (max-width: 480px) {
       /* Small mobile devices */
       .hero {
-        left: 1.5vh;
+        left: 1vh;
         margin: 10px;
         border-radius: 15px;
       }
@@ -915,14 +915,14 @@ p {
       }
 
       .sticky-left {
-        left:75vh;
+        left:102vh;
         bottom: 111vh;
       }
 
       .sticky-right {
         display: flex;
         flex-direction: column;
-        left: 1px;
+        left: 7px;
         bottom: 107vh;
       }
 
@@ -1129,7 +1129,7 @@ p {
 
 /* points */
 .points-section {
-  background-color: #bbdbff; /* Cool blue */
+  background-color: #e2eeff; /* Cool blue */
   color: rgb(60, 144, 255);
   padding: 60px 20px;
   margin: 0 4vh;
@@ -1481,6 +1481,7 @@ p {
   .vision-mission{
   margin-top: 2vh;
     height: 65vh;
+    width: 98vh;
     padding: 0 0;
   }
   .stat-number{
@@ -1520,7 +1521,7 @@ p {
 /*our value*/
 .main-section {
   padding: 70px 20px;
-  background-color: #e2eeff;
+  background-color: #bbdbff;
   text-align: center;
   height: 50vh;
   margin-bottom: 55vh;
@@ -1577,22 +1578,80 @@ p {
 
 /* Card Icon Circle - Half in/half out */
 .card-icon {
-  width: 100px;
-  height: 100px;
-  
+  /* Base dimensions */
+  /* width: 80px; */
+  height: 80px;
+  padding: 3vh;
+  /* Circle styling */
   background: #66a8ff;
   border-radius: 50%;
-  margin: -60px auto 30px;
+  border: 4px solid white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  
+  /* Positioning */
+  margin: -50px auto 25px;
+  position: relative;
+  z-index: 3;
+  
+  /* Content centering */
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  /* Text styling */
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  
+  /* Animation */
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  z-index: 3;
-  border: 5px solid white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive scaling for larger screens */
+@media (min-width: 1200px) {
+  .card-icon {
+    width: 90px;
+    height: 90px;
+    margin: -55px auto 28px;
+    font-size: 2.2rem;
+    border-width: 4.5px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .card-icon {
+    width: 100px;
+    height: 100px;
+    margin: -60px auto 30px;
+    font-size: 2.5rem;
+    border-width: 5px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .card-icon {
+    width: 120px;
+    height: 120px;
+    margin: -70px auto 35px;
+    font-size: 3rem;
+    border-width: 6px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .card-icon {
+    width: 140px;
+    height: 140px;
+    margin: -80px auto 40px;
+    font-size: 3.5rem;
+    border-width: 7px;
+  }
+}
+
+/* Hover effects */
+.card-icon:hover {
+  transform: scale(1.1);
+  background: #4d96ff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Card Content */
@@ -1868,7 +1927,7 @@ p {
 @media (max-width: 480px) {
   .main-section {
       padding: 60px 15px;
-      width: 80vh;
+      width: 103vh;
       margin-bottom: 120vh;
    
   }
@@ -2749,8 +2808,12 @@ p {
 @media (max-width: 768px) {
   .navbar-container {
     padding: 0 20px;
+    width: 127%;
   }
 
+  .btn1{
+    margin-right: 10px;
+  }
   .nav-links {
     position: fixed;
     top: 65px;
@@ -2881,13 +2944,17 @@ p {
   .cards-container {
     flex-direction: column;
     align-items: center;
-    margin-left: 7vh;
+    margin-left: 29vh;
+    /* margin-bottom: 16vh; */
+    
+   
+
   }
   
   .card {
-    width: 99%;
-    height: 26vh;
-    margin-bottom: 30px;
+    width: 120%;
+    height: 30vh;
+    /* margin-bottom: 30px; */
     left: 3vh;
   }
   
@@ -2902,6 +2969,7 @@ p {
     height: 20vh;
     width: 80px;
   }
+  
 }
 
 /* Small devices (landscape phones, 576px to 767px) */
@@ -2920,6 +2988,7 @@ p {
     padding-top: 40px;
     transition: all 0.3s ease;
   }
+
   
   .nav-links.active {
     left: 0;
@@ -2969,7 +3038,7 @@ p {
   .points-section {
     margin-top: -4vh;
     margin: 0 20px;
-    width: 46.3rem;
+    width: 48.7rem;
     border-radius: 30px;
   }
   
@@ -2978,10 +3047,13 @@ p {
     margin-left: -7vh;
   }
   
+  .vision-mission{
+    height: 90vh;
+  }
   /* Features carousel */
   .features-section {
     height: 35vh;
-    width: 82vh;
+    width: 105vh;
     margin-left: 2vh;
     padding:10px 0;
   }
@@ -3012,23 +3084,33 @@ p {
 }
   .hero{
     top: -8vh;
-    width: 81vh;
+    width: 105vh;
   }
   /* Hero section */
   .hero-content h1 {
     font-size: 2rem;
-    /* margin-left:vh; */
+    margin-left:0vh;
   }
   
   .hero-content h2 {
     font-size: 1.7rem;
-    width: 60vh;
+    width: 70vh;
     margin-left: -4vh;
   }
+  .card-content .card-icon {
+    margin-left: -3.5vh;
+    top: -5vh;
+    height: 42px;
+    width: 42px;
+}
+
+.card h2{
+  margin-top: -11vh;
   
+}
   /* About section */
   .about-container {
-width: 111%;
+width: 145%;
     padding: 1rem;
   }
   
@@ -3054,7 +3136,9 @@ width: 111%;
   /* Stats section */
 
   .stats-section{
-    width: 80vh;
+    margin-top:4vh;
+    width: 110vh;
+    
   }
   .stat-number {
     font-size: 3rem;
@@ -3064,6 +3148,7 @@ width: 111%;
   .footer {
     height: auto;
     padding: 40px 0;
+    width: 110vh;
   }
   
   .floating-social-icons {

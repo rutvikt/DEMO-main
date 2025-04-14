@@ -121,18 +121,18 @@ p {
   transform: translateY(-2px);
 }
 
-.btnz-outline {
+/* .btnz-outline {
   background-color: #3892f3;
   border-radius: 3vh;
   border: 2px solid var(--primary-color);
   color: black;
   z-index: 999;
-}
+} */
 
-.btnz-outline:hover {
+/* .btnz-outline:hover {
   background-color:#78afee;
   color: var(--white);
-}
+} */
 .section-title {
   text-align: center;
   margin-bottom: 60px;
@@ -1305,7 +1305,7 @@ p {
       .hero {
         margin: 10px;
         margin-top: 5vh;
-        width: 73vh;
+        width: 84vh;
         height: 70vh;
         margin-left: 4%;
         border-radius: 15px;
@@ -1313,15 +1313,17 @@ p {
 
       .hero-content {
        margin: 0;
+       max-width: 2000px;
+       width: 110%;
        margin-left: 3%;
         padding: 58px 32px;
       }
 .about{
-  width: 73vh;
+  width: 88vh;
 }
 
 .clients{
-  width: 68vh;
+  width: 82vh;
 }
 
 .slider-section{
@@ -1347,7 +1349,7 @@ height: 90vh;
     }
 
       .sticky-left {
-        left: 68vh;
+        left: 82vh;
         bottom: 111vh;
       }
 
@@ -2187,9 +2189,11 @@ overflow: hidden;
   width: 68vh;
 }
 .navbar{
-  width: 77vh;
-  padding: 0 3vh;
+  width: 79vh;
+  padding: 0 0vh 0 5.5vh;
 }
+
+
 
 .navbar img{
   margin-left: -40px;
@@ -2283,7 +2287,7 @@ overflow: hidden;
 @media (max-width: 480px) {
 .slider-section{
   height: 50vh;
-  width: 69vh;
+  width: 84vh;
   
 }
 .services-container{
@@ -2812,11 +2816,11 @@ overflow: hidden;
 
       .service-details.active {
         padding: 2vh;
-        height: 77vh;
+        height: 96vh;
     }
  
     .services-menu{
-      margin-bottom: -55vh;
+      margin-bottom: -45vh;
     }
       .services-section {
         padding: 1rem 5%;
@@ -2986,7 +2990,8 @@ overflow: hidden;
 
     @media (max-width: 576px) {
       .services-section {
-        height: 122vh;
+        height: 144vh;
+        width: 88vh;
         padding: 3rem 5%;
       }
       
@@ -3829,6 +3834,12 @@ overflow: hidden;
 @media (max-width: 768px) {
   .navbar-container {
     padding: 0 20px;
+    width: 80vh;
+  
+  }
+
+  .btnz{
+    margin: 0 10px;
   }
 
   .nav-links {
@@ -3845,10 +3856,10 @@ overflow: hidden;
   }
 
   .info-section .bottom-image{
-    top: 6vh;
-    height: 60vh;
+    top: 8vh;
+    height: 70vh;
     right: -10vh;
-    width: 60vh;
+    width: 70vh;
   }
 
 
@@ -3881,7 +3892,7 @@ overflow: hidden;
   }
 
   .footer-container {
-    height: 136vh;
+    height: 149vh;
     grid-template-columns: 1fr;
   }
 
@@ -3894,8 +3905,8 @@ overflow: hidden;
 @media (max-width: 576px) {
 
   .requiry{
-    margin: -5vh 0;
-    width: 73vh;
+    margin-top: 1vh;
+    width: 88vh;
   }
   section {
     padding: 60px 0;
@@ -3906,7 +3917,8 @@ overflow: hidden;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.44rem;
+    margin-left: 6vh;
   }
 
   .btn {
@@ -3922,10 +3934,10 @@ overflow: hidden;
    }
 
   .faq-section{
-    width: 72vh;
+    width: 88vh;
     top: 20vh;
     height: 90vh;
-    margin-bottom: 3vh;
+    margin-bottom: 4vh;
   }
 
   .left-column{
@@ -3981,7 +3993,7 @@ overflow: hidden;
   .footer{
     /* top: 40vh; */
     height: 50% ;
-    width: 171%;
+    width: 184%;
     max-height: 2000%;
   }
   
@@ -4024,7 +4036,7 @@ overflow: hidden;
 @media (max-width:480) {
 
   .footer{
-    height: 90vh;
+    height: 100vh;
   }
    .footer-container {
     grid-template-columns: 1fr;
@@ -4032,6 +4044,12 @@ overflow: hidden;
     gap: 20px;
 
    }
+}
+@media (max-width:376) {
+  .footer{
+    height: 100%;
+    max-height: 1300px;
+  }
 }
 
 /* big size reponsive */
@@ -4079,7 +4097,7 @@ overflow: hidden;
 
 @media (min-width: 1920px) {
   .footer {
-    max-height: 550px;
+    max-height: 580px;
   }
   
   .footer-container {
@@ -4114,6 +4132,7 @@ overflow: hidden;
   .footer-contact p {
     font-size: 1.1rem;
   }
+ 
   
   .footer-links h3,
   .footer-contact h3 {
@@ -4132,10 +4151,11 @@ overflow: hidden;
     max-height: 1000px;
     
   }
-  
+ 
   .footer-container {
     max-width: 100%;
   }
+
   
   .footer-about p,
   .footer-links a,
