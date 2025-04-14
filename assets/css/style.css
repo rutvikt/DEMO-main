@@ -1712,10 +1712,17 @@ overflow: hidden;
       }
 
     .info-section .bottom-image {
-      width: 50vh;
-      right: -19%;
-      top: 23.4%;
+      width: 43vh;
+      right: -20%;
+      top: 28%;
     }
+  }
+}
+@media (min-width:2600px){
+  .info-section .bottom-image {
+    width: 40vh;
+    right: -19%;
+    top: 25%;
   }
 }
 
