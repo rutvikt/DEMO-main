@@ -29,6 +29,8 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+
   
 }
 
@@ -1850,7 +1852,7 @@ overflow: hidden;
 }
 /* About Section */
 .about {
-  background-color: var(--white);
+  /* background-color: var(--white); */
   
 }
 
@@ -2202,7 +2204,7 @@ overflow: hidden;
 
 
 .navbar img{
-  margin-left: -40px;
+  margin-left: -30px;
 
 }
 .nav-links{
@@ -4035,6 +4037,7 @@ overflow: hidden;
     /* height: 10vh; */
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 0 15vh;
     gap: 30px;
   }
 
