@@ -1907,6 +1907,7 @@ p {
 
 @media (max-width: 768px) {
   .value-cards {
+    margin-top: 12vh;
       flex-direction: column;
       align-items: center;
   }
@@ -1926,20 +1927,21 @@ p {
   }
 }
 
+
+
 @media (max-width: 480px) {
   .main-section {
+      margin-top: 12vw;
       padding: 60px 15px;
       width: 109vh;
-      margin-bottom: 165vh;
+      margin-bottom: 149vh;
    
   }
   
   .value-card {
-    margin-top: 7vh;
+    margin-top: 5vh;
       height: 380px;
       padding:  35px 10px;
-
-      
   }
   .value-card .card-icon{
     margin-top: -7px;
@@ -1963,7 +1965,7 @@ p {
   }
 
   .our-value-section .card-content p{
-    padding: 70px 10px;
+    padding: 70px 60px;
   }
 }
 
@@ -2820,7 +2822,7 @@ p {
 
   .btn1{
    
-    margin-right: 260px;
+    margin-right: 323px;
   }
   .nav-links {
     position: fixed;
@@ -2921,7 +2923,6 @@ p {
 
 /* RESPONSIVE */
 
-
 /* Medium devices (tablets, 768px to 991px) */
 @media (max-width: 991px) {
   /* Adjust hero section */
@@ -2963,7 +2964,7 @@ p {
   
   .card {
     width: 70%;
-    height: 40vh;
+    height: 35vh;
     padding:55px;
     /* margin-bottom: 30px; */
     /* left: 13vh; */
@@ -2983,6 +2984,15 @@ p {
   
 }
 
+/* @media (min-width:380px) {
+  .points-section {
+    margin-top: -4vh;
+    margin: 0 20px;
+    margin-top: -12vw;
+    width: 225vw;
+    border-radius: 30px;
+}
+} */
 /* Small devices (landscape phones, 576px to 767px) */
 @media (max-width: 767px) {
   /* Navigation */
@@ -3049,7 +3059,8 @@ p {
   .points-section {
     margin-top: -4vh;
     margin: 0 20px;
-    width: 49.5rem;
+    margin-top: -12vw;
+    width: 110vh;
     border-radius: 30px;
   }
   
@@ -3059,7 +3070,7 @@ p {
   }
   
   .vision-mission{
-    height: 90vh;
+    height: 50vh;
   }
   /* Features carousel */
   .features-section {
@@ -3088,10 +3099,28 @@ p {
   }
 }
 
+
+@media (max-width:400px) {
+  .stats-section{
+    margin-top:174vh;
+    width: 115vh;
+    margin-bottom: 25vw;
+    
+  }
+  .stat-number {
+    font-size: 3rem;
+  }
+  
+}
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
 .navbar{
   width: 88vh;
+}
+
+.navbar .logo img{
+  width: 48%;
+  height: 30%;
 }
   .hero{
     top: -10vh;
@@ -3119,18 +3148,30 @@ p {
   margin-top: -11vh;
   
 }
+
+.stats-section{
+  margin-top:4vh;
+  width: 115vh;
+  margin-bottom: 25vw;
+  
+}
+.stat-number {
+  font-size: 3rem;
+}
   /* About section */
   .about-container {
+    margin-top: -100px;
 width: 153%;
     padding: 1rem;
   }
-  
+     
   .about-content h2{
     
        display: flex;
        justify-content: center;
        
   }
+  
 
  
   /* Points section */
@@ -3146,14 +3187,7 @@ width: 153%;
   
   /* Stats section */
 
-  .stats-section{
-    margin-top:4vh;
-    width: 115vh;
-    
-  }
-  .stat-number {
-    font-size: 3rem;
-  }
+  
   
   /* Footer */
   .footer {
