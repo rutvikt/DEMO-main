@@ -898,7 +898,9 @@ p {
       }
 
       .hero-content {
+       
         padding: 0 95px;
+       
       }
 
       .review-badge {
@@ -915,7 +917,7 @@ p {
       }
 
       .sticky-left {
-        left:102vh;
+        left:108vh;
         bottom: 111vh;
       }
 
@@ -1464,7 +1466,7 @@ p {
 @media (max-width: 768px) {
   .cards-container {
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 0rem;
   }
   
   .card {
@@ -1503,7 +1505,7 @@ p {
     width: 10vh;
   }
   .card {
-    margin: 0 2vh;
+    margin: 0 1vh;
     height: 70vh;
       /* padding: 1.5rem; */
       
@@ -1927,14 +1929,14 @@ p {
 @media (max-width: 480px) {
   .main-section {
       padding: 60px 15px;
-      width: 103vh;
-      margin-bottom: 120vh;
+      width: 109vh;
+      margin-bottom: 165vh;
    
   }
   
   .value-card {
-    margin-top: 5vh;
-      height: 330px;
+    margin-top: 7vh;
+      height: 380px;
       padding:  35px 10px;
 
       
@@ -1956,7 +1958,12 @@ p {
   }
   
   .card-content p {
+   
       font-size: 0.9rem;
+  }
+
+  .our-value-section .card-content p{
+    padding: 70px 10px;
   }
 }
 
@@ -2812,7 +2819,8 @@ p {
   }
 
   .btn1{
-    margin-right: 10px;
+   
+    margin-right: 260px;
   }
   .nav-links {
     position: fixed;
@@ -2942,9 +2950,11 @@ p {
   
   /* Adjust vision-mission cards */
   .cards-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin-left: 29vh;
+    margin-left: 44vh;
+  
+    padding: 0 20px;
     /* margin-bottom: 16vh; */
     
    
@@ -2952,10 +2962,11 @@ p {
   }
   
   .card {
-    width: 120%;
-    height: 30vh;
+    width: 70%;
+    height: 40vh;
+    padding:55px;
     /* margin-bottom: 30px; */
-    left: 3vh;
+    /* left: 13vh; */
   }
   
   /* Adjust stats section */
@@ -3038,7 +3049,7 @@ p {
   .points-section {
     margin-top: -4vh;
     margin: 0 20px;
-    width: 48.7rem;
+    width: 49.5rem;
     border-radius: 30px;
   }
   
@@ -3053,7 +3064,7 @@ p {
   /* Features carousel */
   .features-section {
     height: 35vh;
-    width: 105vh;
+    width: 110vh;
     margin-left: 2vh;
     padding:10px 0;
   }
@@ -3080,22 +3091,22 @@ p {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
 .navbar{
-  width: 85vh;
+  width: 88vh;
 }
   .hero{
-    top: -8vh;
-    width: 105vh;
+    top: -10vh;
+    width: 110vh;
   }
   /* Hero section */
   .hero-content h1 {
     font-size: 2rem;
-    margin-left:0vh;
+    margin-left:3vh;
   }
   
   .hero-content h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     width: 70vh;
-    margin-left: -4vh;
+    margin-left: 2vh;
   }
   .card-content .card-icon {
     margin-left: -3.5vh;
@@ -3110,7 +3121,7 @@ p {
 }
   /* About section */
   .about-container {
-width: 145%;
+width: 153%;
     padding: 1rem;
   }
   
@@ -3137,7 +3148,7 @@ width: 145%;
 
   .stats-section{
     margin-top:4vh;
-    width: 110vh;
+    width: 115vh;
     
   }
   .stat-number {
@@ -3148,7 +3159,7 @@ width: 145%;
   .footer {
     height: auto;
     padding: 40px 0;
-    width: 110vh;
+    width: 115vh;
   }
   
   .floating-social-icons {
