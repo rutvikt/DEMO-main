@@ -984,7 +984,7 @@ p {
     padding: 10px 20px;
     display: inline-block;
     margin-top: 1rem;
-    margin-left: 25vh;
+    margin-left: 23vh;
     
   }
 
@@ -1028,7 +1028,10 @@ p {
  .sticky-left {
   position: fixed;
   right: 30px;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* bottom: 280px; */
   z-index: 10;
   
@@ -1314,7 +1317,7 @@ p {
         margin: 10px;
         margin-top: 5vh;
         width: 87vh;
-        height: 70vh;
+        height: 50vh;
         margin-left: 4%;
         border-radius: 15px;
       }
@@ -1325,6 +1328,7 @@ p {
        width: 110%;
        margin-left: 3%;
         padding: 58px 32px;
+        justify-content: center;
       }
 .about{
   width: 88vh;
@@ -2334,6 +2338,7 @@ overflow: hidden;
 
   .testimonial-content h2 {
     margin-top: -4vh;
+    
     font-size: 1.6rem;
   }
 
@@ -2353,7 +2358,7 @@ overflow: hidden;
     .services-section {
       padding: 4rem 5% 1.5rem;
       position: relative;
-      background-color: white;
+      /* background-color: white; */
       overflow: hidden;
     }
     
@@ -2524,9 +2529,9 @@ overflow: hidden;
     .service-content {
       flex: 2;
       padding: 2rem;
-      background-color: #f8fafc;
+      /* background-color: #f8fafc; */
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
       min-height: 500px;
       position: relative;
       overflow: hidden;
@@ -3017,7 +3022,7 @@ overflow: hidden;
     @media (max-width: 576px) {
       .services-section {
         height: 144vh;
-        width: 88vh;
+        width: 90vh;
         padding: 3rem 5%;
       }
       
@@ -3025,6 +3030,7 @@ overflow: hidden;
         height: 90vh;
       }
       .section-header h2 {
+        left: 13px;
         font-size: 1.8rem;
       }
       
@@ -3172,6 +3178,7 @@ overflow: hidden;
     }
     
     .faq-title::after {
+     
       width: 100px;
       height: 5px;
       bottom: -20px;
@@ -3845,6 +3852,7 @@ overflow: hidden;
   .testimonial-content,
   .testimonial-cards {
     width: 100%;
+    text-align: justify;
   }
 
   .testimonial-cards {
@@ -3882,8 +3890,8 @@ overflow: hidden;
     position: fixed;
     top: 65px;
     left: -100%;
-    width: 100%;
-    height: calc(100vh - 70px);
+    width: 60%;
+    height: calc(100vh - 60px);
     background-color: var(--white);
     flex-direction: column;
     align-items: center;
@@ -3944,6 +3952,7 @@ overflow: hidden;
     margin-top: -10vh;
     width: 91vh;
   }
+
   section {
     padding: 60px 0;
   }
@@ -3954,7 +3963,7 @@ overflow: hidden;
 
   .hero h1 {
     font-size: 1.4rem;
-    margin-left: 6vh;
+    margin-left: 70px;
   }
 
   .btn {
@@ -3967,6 +3976,7 @@ overflow: hidden;
 
    .clients{
     height: 35vh;
+    border-radius: 35px;
    }
 
   .faq-section{
@@ -4233,3 +4243,4 @@ overflow: hidden;
     opacity: 0;
   }
 }
+
