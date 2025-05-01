@@ -3,82 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/Navbar.css">
   <link rel="stylesheet" href="../assets/css/webDevelopment.css">
-  <title>Document</title>
+  
+  <!-- <link rel="stylesheet" href="../assets/css/Navbar.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/Footer.css">
+  <link rel="stylesheet" href="../assets/css/Faq.css">
+  <link rel="stylesheet" href="/assets/css/Sticky.css">
+  
+  <title>Web Development - Techorses</title>
+  <link rel="icon" href="../assets/images/THicon.png">
 </head>
 <body>
-   <!-- Navbar -->
-   <nav class="navbar">
-    <div class="container navbar-container">
-      <a href="#" class="logo">
-        <img src="../assets/images/th.png" alt="Logo">
-      </a>
-      
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="../pages/Company.html">Company</a></li>
-        <li class="services-dropdown">
-          <a href="#">Services <i class="fas fa-chevron-down"></i></a>
-          <div class="services-mega-menu">
-            <div class="services-track-container">
-              <div class="services-track">
-                <a href="../pages/GraphicDesign.html" class="service-card">
-                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb')"></div>
-                  <div class="card-content">
-                   
-                    <h3>Graphic Design</h3>
-                  </div>
-                </a>
-                <a href="../pages/mobileApp.html" class="service-card">
-                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6')"></div>
-                  <div class="card-content">
-                   
-                    <h3>Mobile App Development</h3>
-                  </div>
-                </a>
-                <a href="#" class="service-card">
-                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d')"></div>
-                  <div class="card-content">
-                   
-                    <h3>Web Development</h3>
-                  </div>
-                </a>
-                <a href="./uiUxDesign.html" class="service-card">
-                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1541462608143-67571c6738dd')"></div>
-                  <div class="card-content">
-              
-                    <h3>UI/UX Design</h3>
-                  </div>
-                </a>
-                <a href="/service/marketing" class="service-card">
-                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093')"></div>
-                  <div class="card-content">
-                 
-                    <h3>Marketing Solutions</h3>
-                  </div>
-                </a>
-                <a href="/service/custom-software" class="service-card">
-                  <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71')"></div>
-                  <div class="card-content">
-                 
-                    <h3>Custom Software</h3>
-                  </div>
-                </a>
-              </div>
+ <!-- Navbar -->
+ <nav class="navbar">
+  <div class="container navbar-container">
+    <a href="#" class="logo">
+      <img src="../assets/images/th.png" alt="Logo">
+    </a>
+    
+    <ul class="nav-links" id="navLinks">
+      <!-- <div class="nav-links-inner"> -->
+      <li><a href="../index.html">Home</a></li>
+      <li ><a href="../pages/Company.html">Company</a></li>
+      <li class="services-dropdown">
+        <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+        <div class="services-dropdown-content">
+          <a href="#"> <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
             </div>
-          </div>
-        </li>
-        <li><a href="./pages/blog.html">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      
-      <button class="btn1 btn-outline" id="becomeClientBtn">+ Become a Client</button>
-      <button class="mobile-menu-btn" id="mobileMenuBtn">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </nav>
+            <div class="service-name">Web Development</div>
+          </div></a>
+
+          <a href="./CustomSoftware.html"><div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="service-name">Custom Software<br/> Development</div>
+          </div></a>
+
+          <a href="./Marketing.html"><div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="service-name">Marketing Solution</div>
+          </div></a>
+
+           <a href="./GraphicDesign.html"><div  class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="service-name">Graphic Design</div>
+          </div></a>
+         
+          <a href="./uiUxDesign.html"><div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <div class="service-name">UI/UX Design</div>
+          </div></a>
+           <a href="./mobileApp.html"><div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="service-name">Mobile App.<br/> Development</div>
+          </div></a>
+        </div>
+      </li>
+      <li><a href="Work.html">Work</a></li>
+      <!-- <li><a href="./pages/blog.html">Blog</a></li> -->
+      <li><a href="./Contact.html">Contact</a></li>
+      <!-- </div> -->
+    </ul>
+    
+    <button class="btn1 btn-outline" id="becomeClientBtn">+ Become a Client</button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
 
   <!-- Modal -->
   <div class="modal" id="clientModal">
@@ -101,36 +106,13 @@
         <div class="form-group">
           <p>Our Email: hey@techorses.com</p>
         </div>
-        <button type="submit" class="btn1">Submit</button>
+        <button type="submit" class=" btn-s">Submit</button>
       </form>
     </div>
   </div>
-<!-- Hero Section -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <h1>WEB DEVELOPMENT</h1>
-      <p>Techorses Designs can help your business look its best.</p>
-      <ul class="hero-points">
-        <li>➤ Unique and Creative Graphic Design Services for Businesses.</li>
-        <li>➤ Tailored for A Diverse Range of Clients.</li>
-        <li>➤ High-Quality Graphics to Elevate your Brand Image.</li>
-      </ul>
-      <h3>Want to boost your brand and leave a lasting impact?</h3>
-      
-      <p>TECHORSES Graphic Design is here to help! Our design wizards craft eye-catching graphics that’ll make your business shine. From logos to website designs, we’ll give you top-quality graphics that are perfect for your brand. With Techorses, you’re guaranteed amazing designs, creativity, and a professional touch. Upgrade your brand with Techorses Graphic Design today!</p>
-      
-    </div>
-    <img class="hero-img" src="./assets/images/HERO.png" alt="IT Solutions">
-  </div>
-  
-  <div class="scroll-down">
-    <span>Scroll Down</span>
-    <div class="mouse"></div>
-  </div>
 
-  <!-- Sticky left contact button -->
-  <div class="sticky-left">
+   <!-- Sticky left contact button -->
+   <div class="sticky-left">
     <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="contact-btn" data-tooltip="Contact Us">
       <i class="fas fa-phone"></i>
     </a>
@@ -153,137 +135,179 @@
     </a>
     
   </div>
+<!-- sticky mobile view -->
+<div class="mobile-contact-section">
+  <div class="mobile-contact-content">
+    <p class="contact-label">Talk to an Expert</p>
+    <p class="contact-number">📞 +91 93283 38281</p>
+    <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="contact-button">Contact Us</a>
+  </div>
+</div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container-web">
+        <div class="hero-content">
+            <h1>Web Development</h1>
+            <p>Transform Your Online Presence With Our Website Development Services.</p>
+            <ul class="hero-points">
+                <li><strong>What we do:</strong> We make the best websites for your business.</li>
+                <li><strong>Who we do it for:</strong> Businesses who want to grow online.</li>
+                <li><strong>What they get:</strong> More website visitors, people who like the website, and more sales.</li>
+            </ul>
+            <h3>Need a website that elevates your brand and attracts customers?</h3>
+            <p>TECHORSES offers web design services focused on user experience and lead generation. We create customized websites with responsive design and seamless navigation to make your website shine online. Partner with us for a professional website that drives growth and success.</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </div>
+    </div>
 </section>
 
-<section class="main-header"><h1>What We Provide?</h1></section>
+<!-- Main Header -->
+<section class="main-header" id="services">
+    <div class="container">
+        <h1>What We Provide?</h1>
+    </div>
+</section>
+
+<!-- Sticky Scrolling Cards -->
+<div class="container">
+    <div class="cards-scroll-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-body">
+                <h1>Custom Website Design</h1>
+                <p>Get a website that will make your brand stand out. Our experts will work with you to create a custom design that reflects your business and keeps customers coming back for more.</p>
+                <a href="#" class="card-button">Transform Your Brand Identity with Custom Web Design</a>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-body">
+                <h1>Mobile Responsive Development</h1>
+                <p>Make sure your website looks good and works well on any device with our mobile responsive design services. Expand your reach and offer a better user experience on all platforms.</p>
+                <a href="#" class="card-button">Optimize Your Website for Mobile Users Today</a>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-body">
+                <h1>E-commerce Solutions</h1>
+                <p>Boost your online sales with our easy-to-use e-commerce solutions. We handle secure payments and make it easy for your customers to find what they need, so you can focus on growing your business.</p>
+                <a href="#" class="card-button">Start Selling Online with Our E-commerce Website Development Services</a>
+            </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="card-body">
+                <h1>SEO Optimization</h1>
+                <p>Want to boost your website's ranking and get more people to visit it for free? Our SEO optimization services can help! We'll do keyword research, make your website easier to find for people who are searching for businesses like yours, and help you build a stronger online presence.</p>
+                <a href="#" class="card-button">Optimize Your Website for Search Engines Now</a>
+            </div>
+        </div>
+        
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="card-body">
+                <h1>Content Management Systems</h1>
+                <p>Manage your website like a pro with our user-friendly content management systems! Say goodbye to confusing tech jargon and hello to effortless updates and content control. Keep your website fresh and engaging without breaking a sweat.</p>
+                <a href="#" class="card-button">Simplify Website Management with Our CMS Solutions</a>
+            </div>
+        </div>
+        
+        <!-- Card 6 -->
+        <div class="card">
+            <div class="card-body">
+                <h1>Website Maintenance and Support</h1>
+                <p>Keep your website running smoothly with our maintenance and support services. We take care of updates, security, and performance optimization, so you can focus on your business.</p>
+                <a href="#" class="card-button">Get Peace of Mind with Reliable Website Maintenance</a>
+            </div>
+        </div>
+        
+        <!-- Card 7 -->
+        <div class="card">
+            <div class="card-body">
+                <h1>Performance Optimization</h1>
+                <p>Optimize your website speed and performance for better user experience and search engine rankings. Our experts analyze your site for bottlenecks and implement solutions to ensure fast loading times and high performance levels.</p>
+                <a href="#" class="card-button">Optimize Your Site for Success – Contact Us Today</a>
+            </div>
+        </div>
+        
+        <!-- Card 8 -->
+        <div class="card">
+            <div class="card-body">
+                <h1>Website Redesign and Upgrades</h1>
+                <p>Revamp your website with our design and upgrade services. We'll create a modern and functional online experience for your visitors.</p>
+                <a href="#" class="card-button">Upgrade Your Website for Enhanced Performance</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+ <!-- FAQ Section -->
+          <!-- FAQ Section -->
 
-    <!-- Services Timeline -->
-    <section class="services-timeline" id="services">
-      <div class="container">
-          <div class="section-title">
-              <h2>Our Web Development Services</h2>
-              <p>We offer comprehensive solutions to build, optimize, and maintain your online presence</p>
-          </div>
-          <div class="timeline-container">
-              <div class="timeline-line"></div>
-              
-              <!-- Service 1 -->
-              <div class="service-section">
-                  <div class="service-content">
-                      <h1>Custom Website Design</h1>
-                      <p>Get a website that will make your brand stand out. Our experts will work with you to create a custom design that reflects your business and keeps customers coming back for more.</p>
-                      <button class="service-btn">Transform Your Brand Identity with Custom Web Design</button>
-                  </div>
-                  <div class="service-image">
-                      <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Custom Website Design">
-                  </div>
-                  <div class="timeline-dot" style="top: 50%;"></div>
-              </div>
-              
-              <!-- Service 2 -->
-              <div class="service-section">
-                  <div class="service-content">
-                      <h1>Mobile Responsive Development</h1>
-                      <p>Make sure your website looks good and works well on any device with our mobile responsive design services. Expand your reach and offer a better user experience on all platforms.</p>
-                      <button class="service-btn">Optimize Your Website for Mobile Users Today</button>
-                  </div>
-                  <div class="service-image">
-                      <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Mobile Responsive Development">
-                  </div>
-                  <div class="timeline-dot" style="top: 50%;"></div>
-              </div>
-              
-              <!-- Service 3 -->
-              <div class="service-section">
-                  <div class="service-content">
-                      <h1>E-commerce Solutions</h1>
-                      <p>Boost your online sales with our easy-to-use e-commerce solutions. We handle secure payments and make it easy for your customers to find what they need, so you can focus on growing your business.</p>
-                      <button class="service-btn">Start Selling Online with Our E-commerce Website Development Services</button>
-                  </div>
-                  <div class="service-image">
-                      <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="E-commerce Solutions">
-                  </div>
-                  <div class="timeline-dot" style="top: 50%;"></div>
-              </div>
-              
-              <!-- Service 4 -->
-              <div class="service-section">
-                  <div class="service-content">
-                      <h1>SEO Optimization</h1>
-                      <p>Want to boost your website's ranking and get more people to visit it for free? Our SEO optimization services can help! We'll do keyword research, make your website easier to find for people who are searching for businesses like yours, and help you build a stronger online presence.</p>
-                      <button class="service-btn">Optimize Your Website for Search Engines Now</button>
-                  </div>
-                  <div class="service-image">
-                      <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="SEO Optimization">
-                  </div>
-                  <div class="timeline-dot" style="top: 50%;"></div>
-              </div>
-              
-              <!-- Service 5 -->
-              <div class="service-section">
-                  <div class="service-content">
-                      <h1>Content Management Systems</h1>
-                      <p>Manage your website like a pro with our user-friendly content management systems! Say goodbye to confusing tech jargon and hello to effortless updates and content control. Keep your website fresh and engaging without breaking a sweat.</p>
-                      <button class="service-btn">Simplify Website Management with Our CMS Solutions</button>
-                  </div>
-                  <div class="service-image">
-                      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Content Management Systems">
-                  </div>
-                  <div class="timeline-dot" style="top: 50%;"></div>
-              </div>
-              
-              <!-- Service 6 -->
-              <div class="service-section">
-                  <div class="service-content">
-                      <h1>Website Maintenance and Support</h1>
-                      <p>Keep your website running smoothly with our maintenance and support services. We take care of updates, security, and performance optimization, so you can focus on your business.</p>
-                      <button class="service-btn">Get Peace of Mind with Reliable Website Maintenance</button>
-                  </div>
-                  <div class="service-image">
-                      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Website Maintenance and Support">
-                  </div>
-                  <div class="timeline-dot" style="top: 50%;"></div>
-              </div>
-              
-              <!-- Service 7 -->
-              <div class="service-section">
-                  <div class="service-content">
-                      <h1>Performance Optimization</h1>
-                      <p>Optimize your website speed and performance for better user experience and search engine rankings. Our experts analyze your site for bottlenecks and implement solutions to ensure fast loading times and high performance levels.</p>
-                      <button class="service-btn">Optimize Your Site for Success – Contact Us Today</button>
-                  </div>
-                  <div class="service-image">
-                      <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Performance Optimization">
-                  </div>
-                  <div class="timeline-dot" style="top: 50%;"></div>
-              </div>
-              
-              <!-- Service 8 -->
-              <div class="service-section">
-                  <div class="service-content">
-                      <h1>Website Redesign and Upgrades</h1>
-                      <p>Revamp your website with our design and upgrade services. We'll create a modern and functional online experience for your visitors.</p>
-                      <button class="service-btn">Upgrade Your Website for Enhanced Performance</button>
-                  </div>
-                  <div class="service-image">
-                      <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Website Redesign and Upgrades">
-                  </div>
-                  <div class="timeline-dot" style="top: 50%;"></div>
-              </div>
-          </div>
+         <!-- FAQ Background (fixed but visibility controlled) -->
+         <div class="faq-bg">
+          <div class="faq-bg-text">FAQ'S</div>
       </div>
-  </section>
-
-  
- <!-- Footer -->
- <footer class="footer" id="contact">
-
+      
+      <!-- FAQ Section -->
+      <section class="faq-section-wrapper" id="faq-section">
+          <div class="faq-content">
+              <div class="faq-title">
+                  <!-- <h2>Frequently Asked Questions</h2> -->
+                  <!-- <p>Find answers to common questions about our services, process, and support</p> -->
+              </div>
+              
+              <div class="faq-cards">
+                  <!-- Card 1 -->
+                  <div class="faq-card">
+                      <h3>What sets Techorses apart from other digital agencies?</h3>
+                      <p>Techorses stands out for its commitment to innovation, client-centric approach, and multidisciplinary delivery of comprehensive digital solutions.</p>
+                  </div>
+                  
+                  <!-- Card 2 -->
+                  <div class="faq-card">
+                      <h3>How can I track the progress of my project during development?</h3>
+                      <p>We provide regular updates and access to project management tools, ensuring transparency and collaboration throughout the development lifecycle.</p>
+                  </div>
+                  
+                  <!-- Card 3 -->
+                  <div class="faq-card">
+                      <h3>Do you offer maintenance and support services after the project is completed?</h3>
+                      <p>Absolutely. We provide ongoing maintenance and support services to ensure your digital assets remain up-to-date and secure.</p>
+                  </div>
+                  
+                  <!-- Card 4 -->
+                  <div class="faq-card">
+                      <h3>What is the cost structure for your services?</h3>
+                      <p>Our pricing is tailored to the scope and complexity of each project. We provide detailed, transparent quotes to ensure clarity on costs.</p>
+                  </div>
+                  
+                  <!-- Card 5 -->
+                  <div class="faq-card">
+                      <h3>What is the Techorses development process like?</h3>
+                      <p>Our development process is collaborative and iterative, ensuring client involvement at key stages for feedback and adjustments.</p>
+                  </div>
+                  
+                  <!-- Card 6 -->
+                  <div class="faq-card">
+                      <h3>What support do you provide if issues arise after the project is completed?</h3>
+                      <p>Our post-launch support includes troubleshooting, bug fixes, and ongoing assistance to address any issues that may arise, ensuring a smooth and reliable digital experience.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
     
-  <div class="container">
+
+  <!-- Footer -->
+  <footer>
     <div class="floating-social-icons">
-      <div class="social-bubble">WELCOME</i>
+      <!-- <div class="social-bubble">WELCOME</i>
       </div>
       <div class="social-bubble">HELLO</div>
       <div class="social-bubble">TECHHORSES</div>
@@ -294,75 +318,100 @@
       <div class="social-bubble">WELCOME</i>
       </div>
       <div class="social-bubble">HELLO</i>
-      </div>
+      </div> -->
     </div>
+  
     <div class="footer-container">
-      <div class="footer-about">
-        <a href="#" class="footer-logo"><img src="../assets/images/THWHITE.webp" alt=""></a>
+      
+      <!-- Left Section -->
+      <div class="footer-left">
+        <!-- <h2>Redefining Your<br>Digital Future!</h2> -->
+        <div class="footer-column footer-logo-section">
+          <img src="../assets/images/THWHITE.webp" alt="DAX Logo" />
+        </div>
         <p>Stay connected and join the digital conversation! Follow us on social media for the latest updates, tech insights, and creative inspirations. Let’s build a vibrant digital community together.</p>
-        <button class="btn0 btn-outline" id="footerClientBtn">+ Become a Client</button>
+        <button  id="becomeClientBtnfooter">+Become a Client</button>
       </div>
-      
-      <div class="footer-links">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="#"> GRAPHIC DESIGN</a></li>
-          <li><a href="#">WEB DEVELOPMENT</a></li>
-          <li><a href="#">MARKETING SOLUTION</a></li>
-          <li><a href="#">CUSTOM SOFTWARE DEVELOPMENT</a></li>
-          <li><a href="#">UI/UX DESIGN</a></li>
-          <li><a href="#">MOBILE APPLICATION DEVELOPMENT</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-links">
-        <h3>Menu</h3>
-        <ul>
-          <li><a href="/">HOME</a></li>
-          <li><a href="#clients">COMPANY</a></li>
-          <li><a href="#testimonials">WORK</a></li>
-          <li><a href="#blog">BLOG</a></li>
-          <li><a href="#careers">CONTACT</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>hey@techorses.com <br/>
-          sales@techorses.com</p>
-        
-        <p>+91 9328338281 <br/>+91 9725653603</p>
-        <p> B-224, samanvay silicon,
-          opp kalyan hotel,
-          dairy den circle,
-          sayajigunj, Vadodara – 390020
-          (Gujarat, India)</p>
-        
-        <div class="social-links">
-          <a href="https://www.instagram.com/techorses_/#"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.linkedin.com/company/techorses-ride-the-technology/"><i class="fab fa-linkedin-in"></i></a>
-          
+
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+
+      <!-- Right Section -->
+      <div class="footer-right">
+        <!-- First Row: Explore | Services | Empty Column -->
+        <div class="footer-top">
+          <div class="footer-column">
+            <h3>Explore</h3>
+            <ul>
+              <li>HOME</li>
+              <li>COMPANY</li>
+              <li>WORK</li>
+              <!-- <li>BLOG</li> -->
+              <li>CONTACT</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+              <li>WEB DEVELOPMENT</li>
+              <li>CUSTOM SOFTWARE DEVELOPMENT</li>
+              <li>MARKETING SOLUTION</li>
+              <li>GRAPHIC DESIGN</li>
+              <li>UI/UX DESIGN</li>
+              <li>MOBILE APPLICATION DEVELOPMENT</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <!-- Empty column to maintain 3-column layout -->
+          </div>
+        </div>
+
+        <!-- Second Row: Location | Get In Touch | Logo -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3>Location</h3>
+            <p>B-224, samanvay silicon,<br/>
+              opp kalyan hotel,<br/>
+              dairy den circle,<br/>
+              sayajigunj, Vadodara – 390020<br/>
+              (Gujarat, India)</p>
+          </div>
+          <div class="footer-column">
+            <h3>Get In Touch</h3>
+            <p class="highlight">+91 7778048992</p>
+            <p class="highlight">+91 9328008281</p>
+            <p class="highlight">+91 9725653603</p>
+            <p class="highlight">hey@techorses.com</p>
+            <p class="highlight">sales@techorses.com</p>
+          </div>
+          <div class="footer-column footer-logo-section">
+            <!-- <img src="./assets/images/THWHITE.webp" alt="DAX Logo" /> -->
+          </div>
+        </div>
+
+        <!-- Divider and Bottom Section -->
+        <div class="footer-bottom-section">
+          <div class="footer-bottom-content">
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL"><i  class="fab fa-facebook-f"></i></a> 
+             <a href="https://www.instagram.com/techorses12/"><i class="fab fa-instagram"></i></a> 
+             <a href="https://www.linkedin.com/company/techorses-ride-the-technology/"><i  class="fab fa-linkedin-in"></i></a> 
+            </div>
+            <p class="footer-copyright">
+              Copyright © 2025 Techorses, All rights reserved. Designed by Techorses. <span>Privacy Policy</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p class="copyright">Copyright © 2025 Techorses, All rights reserved. Designed by Techorses.</p>
-      <div class="footer-links-bottom">
-        <a href="#">Privacy Policy</a>
-        <!-- <a href="#">Terms of Service</a>
-        <a href="#">Cookie Policy</a> -->
-      </div>
-    </div>
-  </div>
-          <!-- Go to Top Button -->
-<button id="goToTopBtn" title="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-</footer>
 
-
-  <script src="../assets/js/webDevelopment.js"></script>
+      <!-- Go to Top Button -->
+      <button id="goToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+  </footer>
+  <div class="other  background:#000000"></div>
+<script src="../assets/js/webDevelopment.js"></script>
+<script src="../assets/js/Faq's.js"></script>
 </body>
 </html>

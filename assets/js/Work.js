@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const navLinks = document.getElementById('navLinks');
@@ -129,16 +130,53 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//hero nac sroll to border none
-window.addEventListener('scroll', function () {
-  const nav = document.querySelector('.nav-links');
-  const hero = document.querySelector('#services'); // Adjust if your hero section has a different ID
-  const heroTop = hero.offsetTop;
+// ------
+// Go to Top Button functionality
 
-  if (window.scrollY >= heroTop) {
-    nav.classList.add('scrolled');
+const goToTopBtn = document.getElementById("goToTopBtn");
+  
+// When the user scrolls down 200px from the top, show the button
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    goToTopBtn.style.display = "block";
   } else {
-    nav.classList.remove('scrolled');
+    goToTopBtn.style.display = "none";
+  }
+};
+
+// When the user clicks on the button, scroll to the top of the document
+goToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+// Modal Handling
+const modal = document.getElementById('clientModal');
+const becomeClientBtn = document.getElementById('becomeClientBtn');
+const footerClientBtn = document.getElementById('becomeClientBtnfooter');
+const closeModal = document.getElementById('closeModal');
+
+becomeClientBtn.addEventListener('click', () => {
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+});
+
+footerClientBtn.addEventListener('click', () => {
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+});
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
   }
 });
 
@@ -170,134 +208,31 @@ document.addEventListener('DOMContentLoaded', function() {
   // Check on scroll
   window.addEventListener('scroll', checkFooterVisibility);
 });
-
-
-// Modal Handling
-const modal = document.getElementById('clientModal');
-const becomeClientBtn = document.getElementById('becomeClientBtn');
-const footerClientBtn = document.getElementById('becomeClientBtnfooter');
-const closeModal = document.getElementById('closeModal');
-
-becomeClientBtn.addEventListener('click', () => {
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-});
-
-footerClientBtn.addEventListener('click', () => {
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-});
-
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-  document.body.style.overflow = 'auto';
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-});
-
-// Go to Top Button functionality
-
-const goToTopBtn = document.getElementById("goToTopBtn");
-  
-// When the user scrolls down 200px from the top, show the button
-window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    goToTopBtn.style.display = "block";
-  } else {
-    goToTopBtn.style.display = "none";
-  }
-};
-
-// When the user clicks on the button, scroll to the top of the document
-goToTopBtn.addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-// ---------------------------------------------------
-
-
-    // Card Animation on Scroll
-    const cards = document.querySelectorAll('.card');
-    const cardsContainer = document.querySelector('.cards-scroll-container');
-
-    function checkCards() {
-        const triggerBottom = window.innerHeight / 5 * 4;
-
-        cards.forEach((card, index) => {
-            const cardTop = card.getBoundingClientRect().top;
-
-            if (cardTop < triggerBottom) {
-                card.classList.add('visible');
-                // Stagger the animation
-                card.style.transitionDelay = `${index * 0.1}s`;
+// ------------------------------------------
+    // Animation on scroll
+    const animateElements = document.querySelectorAll('.fade-in');
+        
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    }
-
-    // Initial check
-    checkCards();
-
-    // Check on scroll
-    window.addEventListener('scroll', checkCards);
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            }
+    }, {
+        threshold: 0.1
+    });
+    
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
+    
+    // Infinite logo marquee - duplicate items for seamless looping
+    document.addEventListener('DOMContentLoaded', function() {
+        const marquees = document.querySelectorAll('.logo-marquee');
+        
+        marquees.forEach(marquee => {
+            const items = marquee.innerHTML;
+            marquee.innerHTML = items + items;
         });
     });
-
-    // ---------------------------------------
- 
-    // --------------------------------sticky remove footer
-document.addEventListener('DOMContentLoaded', function() {
-  const footer = document.querySelector('footer');
-  const stickyLeft = document.querySelector('.sticky-left');
-  const stickyRight = document.querySelector('.sticky-right');
-  
-  function checkFooterVisibility() {
-    const footerRect = footer.getBoundingClientRect();
-    const isFooterInView = (
-      footerRect.top <= window.innerHeight && 
-      footerRect.bottom >= 0
-    );
-    
-    if (isFooterInView) {
-      stickyLeft.style.display = 'none';
-      stickyRight.style.display = 'none';
-    } else {
-      stickyLeft.style.display = 'flex';
-      stickyRight.style.display = 'flex';
-    }
-  }
-  
-  // Initial check
-  checkFooterVisibility();
-  
-  // Check on scroll
-  window.addEventListener('scroll', checkFooterVisibility);
-});

@@ -129,10 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 //hero nac sroll to border none
 window.addEventListener('scroll', function () {
   const nav = document.querySelector('.nav-links');
-  const hero = document.querySelector('#services'); // Adjust if your hero section has a different ID
+  const hero = document.querySelector('.contact-info'); // Adjust if your hero section has a different ID
   const heroTop = hero.offsetTop;
 
   if (window.scrollY >= heroTop) {
@@ -140,35 +141,6 @@ window.addEventListener('scroll', function () {
   } else {
     nav.classList.remove('scrolled');
   }
-});
-
-// -----sticy remove footer
-document.addEventListener('DOMContentLoaded', function() {
-  const footer = document.querySelector('.other');
-  const stickyLeft = document.querySelector('.sticky-left');
-  const stickyRight = document.querySelector('.sticky-right');
-  
-  function checkFooterVisibility() {
-    const footerRect = footer.getBoundingClientRect();
-    const isFooterInView = (
-      footerRect.top <= window.innerHeight && 
-      footerRect.bottom >= 0
-    );
-    
-    if (isFooterInView) {
-      stickyLeft.style.display = 'none';
-      stickyRight.style.display = 'none';
-    } else {
-      stickyLeft.style.display = 'flex';
-      stickyRight.style.display = 'flex';
-    }
-  }
-  
-  // Initial check
-  checkFooterVisibility();
-  
-  // Check on scroll
-  window.addEventListener('scroll', checkFooterVisibility);
 });
 
 
@@ -199,7 +171,6 @@ window.addEventListener('click', (e) => {
     document.body.style.overflow = 'auto';
   }
 });
-
 // Go to Top Button functionality
 
 const goToTopBtn = document.getElementById("goToTopBtn");
@@ -220,62 +191,55 @@ goToTopBtn.addEventListener("click", function() {
     behavior: "smooth"
   });
 });
-// ---------------------------------------------------
+// -------------------------------------------------------------------------------------
+     // This would be replaced with your actual map implementation
+        // For example using Leaflet, Google Maps, or other mapping libraries
+        
+        document.addEventListener('DOMContentLoaded', function() {
+          // Simulate map loading
+          setTimeout(function() {
+              const placeholder = document.querySelector('.map-placeholder');
+              if (placeholder) {
+                  placeholder.style.opacity = '0';
+                  setTimeout(() => {
+                      placeholder.style.display = 'none';
+                      
+                      // Here you would initialize your actual map
+                      // initIndiaMap();
+                  }, 300);
+              }
+          }, 2000);
+          
+          // Tooltip demo (would be handled by map library in real implementation)
+          const mapContainer = document.getElementById('india-map-container');
+          const tooltip = document.querySelector('.map-tooltip');
+          
+          if (mapContainer && tooltip) {
+              mapContainer.addEventListener('mousemove', function(e) {
+                  // Demo tooltip - in real implementation this would show region data
+                  if (e.target.classList.contains('map-placeholder')) {
+                      const regions = [
+                          "Maharashtra", "Delhi", "Karnataka", 
+                          "Tamil Nadu", "Uttar Pradesh", "West Bengal"
+                      ];
+                      const randomRegion = regions[Math.floor(Math.random() * regions.length)];
+                      tooltip.innerHTML = `<strong>${randomRegion}</strong><br>Sample data: ${Math.floor(Math.random() * 100)}% coverage`;
+                      tooltip.style.left = (e.pageX + 15) + 'px';
+                      tooltip.style.top = (e.pageY - 15) + 'px';
+                      tooltip.style.opacity = '1';
+                  }
+              });
+              
+              mapContainer.addEventListener('mouseout', function() {
+                  tooltip.style.opacity = '0';
+              });
+          }
+      });
 
-
-    // Card Animation on Scroll
-    const cards = document.querySelectorAll('.card');
-    const cardsContainer = document.querySelector('.cards-scroll-container');
-
-    function checkCards() {
-        const triggerBottom = window.innerHeight / 5 * 4;
-
-        cards.forEach((card, index) => {
-            const cardTop = card.getBoundingClientRect().top;
-
-            if (cardTop < triggerBottom) {
-                card.classList.add('visible');
-                // Stagger the animation
-                card.style.transitionDelay = `${index * 0.1}s`;
-            }
-        });
-    }
-
-    // Initial check
-    checkCards();
-
-    // Check on scroll
-    window.addEventListener('scroll', checkCards);
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            }
-        });
-    });
-
-    // ---------------------------------------
- 
+      
     // --------------------------------sticky remove footer
 document.addEventListener('DOMContentLoaded', function() {
-  const footer = document.querySelector('footer');
+  const footer = document.querySelector('.other');
   const stickyLeft = document.querySelector('.sticky-left');
   const stickyRight = document.querySelector('.sticky-right');
   

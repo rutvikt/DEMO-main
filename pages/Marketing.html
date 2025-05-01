@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="stylesheet" href="../assets/css/Footer.css">
+  
+  <link rel="stylesheet" href="../assets/css/Marketing.css">
+  <link rel="stylesheet" href="../assets/css/Navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/Sticky.css">
+  <link rel="stylesheet" href="../assets/css/Faq.css">
+  <title>Marketing Solution - Techorses</title>
+  <link rel="icon" href="../assets/images/THicon.png">
+</head>
+<body>
+  
+   <!-- Navbar -->
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo">
+        <img src="../assets/images/th.png" alt="Logo">
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <!-- <div class="nav-links-inner"> -->
+        <li><a href="../index.html">Home</a></li>
+        <li ><a href="./Company.html">Company</a></li>
+        <li class="services-dropdown">
+          <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="services-dropdown-content">
+            <a href="./webDevlopment.html"> <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="service-name">Web Development</div>
+            </div></a>
+
+            <a href="./CustomSoftware.html"><div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <div class="service-name">Custom Software<br/> Development</div>
+            </div></a>
+
+            <a href="#"><div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+              <div class="service-name">Marketing Solution</div>
+            </div></a>
+
+             <a href="./GraphicDesign.html"><div  class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <div class="service-name">Graphic Design</div>
+            </div></a>
+           
+            <a href="./uiUxDesign.html"><div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-pencil-ruler"></i>
+              </div>
+              <div class="service-name">UI/UX Design</div>
+            </div></a>
+             <a href="./mobileApp.html"><div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="service-name">Mobile App.<br/> Development</div>
+            </div></a>
+          </div>
+        </li>
+        <li><a href="./Work.html">Work</a></li>
+        <!-- <li><a href="./pages/blog.html">Blog</a></li> -->
+        <li><a href="./Contact.html">Contact</a></li>
+        <!-- </div> -->
+      </ul>
+      
+      <button class="btn1 btn-outline" id="becomeClientBtn">+ Become a Client</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+    <!-- Modal -->
+    <div class="modal" id="clientModal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h3>Hey! Tell us all the things</h3>
+        <form id="clientForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John from Apple">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="john@apple.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Something about your great idea</label>
+            <textarea id="message" placeholder="Describe your project"></textarea>
+          </div>
+          <div class="form-group">
+            <p>Our Email: hey@techorses.com</p>
+          </div>
+          <button type="submit" class=" btn-s">Submit</button>
+        </form>
+      </div>
+    </div>
+
+     <!-- Sticky left contact button -->
+     <div class="sticky-left">
+      <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="contact-btn" data-tooltip="Contact Us">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="whatsapp-btn" data-tooltip="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  
+    <!-- Sticky right social links -->
+    <div class="sticky-right">
+      <a href="https://www.linkedin.com/company/techorses-ride-the-technology/" class="social-link linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.instagram.com/techorses_/#" class="social-link instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+      <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL" class="social-link facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      
+    </div>
+
+    <!-- sticky mobile view -->
+<div class="mobile-contact-section">
+  <div class="mobile-contact-content">
+    <p class="contact-label">Talk to an Expert</p>
+    <p class="contact-number">📞 +91 93283 38281</p>
+    <a href="https://api.whatsapp.com/send/?phone=9328338281&text&type=phone_number&app_absent=0" class="contact-button">Contact Us</a>
+  </div>
+</div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="marketing-icons">
+        <div class="marketing-icon"><i class="fas fa-search"></i></div>
+        <div class="marketing-icon"><i class="fas fa-hashtag"></i></div>
+        <div class="marketing-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="marketing-icon"><i class="fas fa-ad"></i></div>
+        <div class="marketing-icon"><i class="fas fa-users"></i></div>
+        <div class="marketing-icon"><i class="fas fa-bullhorn"></i></div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <h1>MARKETING SOLUTIONS</h1>
+            <p>Make your business successful with Techorses Marketing Services.</p>
+            
+            <div class="hero-points">
+                <ul>
+                    <li><strong>What we do:</strong> Provide cutting-edge marketing solutions.</li>
+                    <li><strong>Who we do it for:</strong> Businesses looking to increase their online presence.</li>
+                    <li><strong>What do they get:</strong> Expert strategies tailored to their needs.</li>
+                </ul>
+            </div>
+            
+            <h3>Are you looking to take your marketing efforts to the next level?</h3>
+            <p>TECHORSES offers powerful marketing strategies to help businesses succeed. We increase their online visibility, help them connect better with their customers, and boost their profits. Our expert methods and unique ideas will revolutionize your marketing game.</p>
+            
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </div>
+</section>
+
+<!-- Main Header -->
+<section class="main-header">
+    <div class="container">
+        <h1>What We Provide?</h1>
+    </div>
+</section>
+
+<!-- Services Cards with Sticky Scroll Effect -->
+<div class="cards-container">
+    <ul id="cards">
+        <!-- Card 1 -->
+        <li class="card" id="card1">
+            <div class="card-body">
+                <div class="chart-visual">
+                    <div class="chart-label">Organic Traffic</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 85%;"></div>
+                    </div>
+                    <div class="chart-label">Search Rankings</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 78%;"></div>
+                    </div>
+                    <div class="chart-label">Lead Generation</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 92%;"></div>
+                    </div>
+                </div>
+                <h1>Search Engine Optimization (SEO)</h1>
+                <p>Improve your online presence and draw more organic traffic to your site with our proven SEO methods. Our team of specialists will optimize your website to rank higher in search results.</p>
+                <a href="#" class="service-btn">Optimize Your Website Now</a>
+            </div>
+        </li>
+        
+        <!-- Card 2 -->
+        <li class="card" id="card2">
+            <div class="card-body">
+                <div class="chart-visual">
+                    <div class="chart-label">Engagement Rate</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 75%;"></div>
+                    </div>
+                    <div class="chart-label">Follower Growth</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 68%;"></div>
+                    </div>
+                    <div class="chart-label">Brand Awareness</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 82%;"></div>
+                    </div>
+                </div>
+                <h1>Social Media Marketing</h1>
+                <p>Reach out to your audience on social media and build a devoted following. Our social media marketing services will help you make campaigns that really connect and boost your online presence.</p>
+                <a href="#" class="service-btn">Boost Your Social Presence</a>
+            </div>
+        </li>
+        
+        <!-- Card 3 -->
+        <li class="card" id="card3">
+            <div class="card-body">
+                <div class="chart-visual">
+                    <div class="chart-label">Content Engagement</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 88%;"></div>
+                    </div>
+                    <div class="chart-label">Lead Conversion</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 72%;"></div>
+                    </div>
+                    <div class="chart-label">Brand Authority</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 95%;"></div>
+                    </div>
+                </div>
+                <h1>Content Marketing Services</h1>
+                <p>Content marketing is key to keep customers interested and coming back for more. We can help you with custom plans to make useful and interesting content that gets results. We can help with everything from blog posts to social media posts.</p>
+                <a href="#" class="service-btn">Enhance Your Content Marketing Efforts</a>
+            </div>
+        </li>
+        
+        <!-- Card 4 -->
+        <li class="card" id="card4">
+            <div class="card-body">
+                <div class="chart-visual">
+                    <div class="chart-label">Profile Completeness</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 65%;"></div>
+                    </div>
+                    <div class="chart-label">Posting Consistency</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 58%;"></div>
+                    </div>
+                    <div class="chart-label">Engagement Quality</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 72%;"></div>
+                    </div>
+                </div>
+                <h1>Social Media Audit and Strategy Planning</h1>
+                <p>Improve your social media presence with a thorough review and personalized plan from Techorses. Get a deep analysis, competitor tips, and a plan for success.</p>
+                <a href="#" class="service-btn">Chart Your Course with Techorses</a>
+            </div>
+        </li>
+        
+        <!-- Card 5 -->
+        <li class="card" id="card5">
+            <div class="card-body">
+                <div class="chart-visual">
+                    <div class="chart-label">Click-Through Rate</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 82%;"></div>
+                    </div>
+                    <div class="chart-label">Conversion Rate</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 75%;"></div>
+                    </div>
+                    <div class="chart-label">ROI</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 68%;"></div>
+                    </div>
+                </div>
+                <h1>Paid Advertising and Promotions</h1>
+                <p>Expand your audience and boost sales with focused paid ads by Techorses. See your brand grow, attract visitors, and turn potential leads into loyal customers.</p>
+                <a href="#" class="service-btn">Ad Campaigns That Deliver Results</a>
+            </div>
+        </li>
+        
+        <!-- Card 6 -->
+        <li class="card" id="card6">
+            <div class="card-body">
+                <div class="chart-visual">
+                    <div class="chart-label">Influencer Reach</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 78%;"></div>
+                    </div>
+                    <div class="chart-label">Engagement Rate</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 85%;"></div>
+                    </div>
+                    <div class="chart-label">Brand Trust</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 92%;"></div>
+                    </div>
+                </div>
+                <h1>Influencer Marketing Collaboration</h1>
+                <p>Collaborate with social media stars in your industry to boost your brand's visibility and trustworthiness. Techorses will help create valuable partnerships that connect with your ideal customers.</p>
+                <a href="#" class="service-btn">Influence Your Audience</a>
+            </div>
+        </li>
+        
+        <!-- Card 7 -->
+        <li class="card" id="card7">
+            <div class="card-body">
+                <div class="chart-visual">
+                    <div class="chart-label">Response Time</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 95%;"></div>
+                    </div>
+                    <div class="chart-label">Content Quality</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 88%;"></div>
+                    </div>
+                    <div class="chart-label">Community Growth</div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="--width: 75%;"></div>
+                    </div>
+                </div>
+                <h1>SOCIAL MEDIA MANAGEMENT</h1>
+                <p>Improve your online presence and reach your target audience with our excellent social media services. Our expert team will help you increase brand visibility, engage with customers, and grow your business. We customize our services to meet your goals and deliver great results organically. Let us handle your social media so you can focus on your business.</p>
+                <a href="#" class="service-btn">Start Growing Your Brand Today</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+  <!-- FAQ Section -->
+          <!-- FAQ Section -->
+
+         <!-- FAQ Background (fixed but visibility controlled) -->
+         <div class="faq-bg">
+            <div class="faq-bg-text">FAQ'S</div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section-wrapper" id="faq-section">
+            <div class="faq-content">
+                <div class="faq-title">
+                    <!-- <h2>Frequently Asked Questions</h2> -->
+                    <!-- <p>Find answers to common questions about our services, process, and support</p> -->
+                </div>
+                
+                <div class="faq-cards">
+                    <!-- Card 1 -->
+                    <div class="faq-card">
+                        <h3>What sets Techorses apart from other digital agencies?</h3>
+                        <p>Techorses stands out for its commitment to innovation, client-centric approach, and multidisciplinary delivery of comprehensive digital solutions.</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="faq-card">
+                        <h3>How can I track the progress of my project during development?</h3>
+                        <p>We provide regular updates and access to project management tools, ensuring transparency and collaboration throughout the development lifecycle.</p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="faq-card">
+                        <h3>Do you offer maintenance and support services after the project is completed?</h3>
+                        <p>Absolutely. We provide ongoing maintenance and support services to ensure your digital assets remain up-to-date and secure.</p>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="faq-card">
+                        <h3>What is the cost structure for your services?</h3>
+                        <p>Our pricing is tailored to the scope and complexity of each project. We provide detailed, transparent quotes to ensure clarity on costs.</p>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="faq-card">
+                        <h3>What is the Techorses development process like?</h3>
+                        <p>Our development process is collaborative and iterative, ensuring client involvement at key stages for feedback and adjustments.</p>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="faq-card">
+                        <h3>What support do you provide if issues arise after the project is completed?</h3>
+                        <p>Our post-launch support includes troubleshooting, bug fixes, and ongoing assistance to address any issues that may arise, ensuring a smooth and reliable digital experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+
+
+     <!-- Footer -->
+     <footer>
+      <div class="floating-social-icons">
+        <!-- <div class="social-bubble">WELCOME</i>
+        </div>
+        <div class="social-bubble">HELLO</div>
+        <div class="social-bubble">TECHHORSES</div>
+        <div class="social-bubble">TH</div>
+        <div class="social-bubble">TECHORSES</div>
+        <div class="social-bubble">TH</i>
+        </div>
+        <div class="social-bubble">WELCOME</i>
+        </div>
+        <div class="social-bubble">HELLO</i>
+        </div> -->
+      </div>
+    
+      <div class="footer-container">
+        
+        <!-- Left Section -->
+        <div class="footer-left">
+          <!-- <h2>Redefining Your<br>Digital Future!</h2> -->
+          <div class="footer-column footer-logo-section">
+            <img src="../assets/images/THWHITE.webp" alt="DAX Logo" />
+          </div>
+          <p>Stay connected and join the digital conversation! Follow us on social media for the latest updates, tech insights, and creative inspirations. Let’s build a vibrant digital community together.</p>
+          <button  id="becomeClientBtnfooter">+Become a Client</button>
+        </div>
+  
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+  
+        <!-- Right Section -->
+        <div class="footer-right">
+          <!-- First Row: Explore | Services | Empty Column -->
+          <div class="footer-top">
+            <div class="footer-column">
+              <h3>Explore</h3>
+              <ul>
+                <li>HOME</li>
+                <li>COMPANY</li>
+                <li>WORK</li>
+                <!-- <li>BLOG</li> -->
+                <li>CONTACT</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Services</h3>
+              <ul>
+                <li>WEB DEVELOPMENT</li>
+                <li>CUSTOM SOFTWARE DEVELOPMENT</li>
+                <li>MARKETING SOLUTION</li>
+                <li>GRAPHIC DESIGN</li>
+                <li>UI/UX DESIGN</li>
+                <li>MOBILE APPLICATION DEVELOPMENT</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <!-- Empty column to maintain 3-column layout -->
+            </div>
+          </div>
+  
+          <!-- Second Row: Location | Get In Touch | Logo -->
+          <div class="footer-middle">
+            <div class="footer-column">
+              <h3>Location</h3>
+              <p>B-224, samanvay silicon,<br/>
+                opp kalyan hotel,<br/>
+                dairy den circle,<br/>
+                sayajigunj, Vadodara – 390020<br/>
+                (Gujarat, India)</p>
+            </div>
+            <div class="footer-column">
+              <h3>Get In Touch</h3>
+              <p class="highlight">+91 7778048992</p>
+              <p class="highlight">+91 9328008281</p>
+              <p class="highlight">+91 9725653603</p>
+              <p class="highlight">hey@techorses.com</p>
+              <p class="highlight">sales@techorses.com</p>
+            </div>
+            <div class="footer-column footer-logo-section">
+              <!-- <img src="./assets/images/THWHITE.webp" alt="DAX Logo" /> -->
+            </div>
+          </div>
+  
+          <!-- Divider and Bottom Section -->
+          <div class="footer-bottom-section">
+            <div class="footer-bottom-content">
+              <div class="footer-socials">
+                <a href="https://www.facebook.com/people/Techorses/100089081915251/?mibextid=ZbWKwL"><i  class="fab fa-facebook-f"></i></a> 
+                <a href="https://www.instagram.com/techorses12/"><i class="fab fa-instagram"></i></a> 
+                <a href="https://www.linkedin.com/company/techorses-ride-the-technology/"><i  class="fab fa-linkedin-in"></i></a> 
+              </div>
+              <p class="footer-copyright">
+                Copyright © 2025 Techorses, All rights reserved. Designed by Techorses. <span>Privacy Policy</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+        <!-- Go to Top Button -->
+        <button id="goToTopBtn" title="Go to top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <div class="other  background:#000000"></div>
+  
+<script src="../assets/js/Faq's.js"></script>
+  <script src="../assets/js/Marketing.js"></script>
+</body>
+</html>

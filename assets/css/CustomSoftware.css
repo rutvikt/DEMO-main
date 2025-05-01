@@ -1,0 +1,496 @@
+
+/* ----------------------------------------------------------------------------------------------- */
+:root {
+  --primary-color: #2563eb;
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+  --card-height: 80vh;
+  --card-margin: 2vh;
+  --card-padding: 3vh;
+  --cards: 3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container-cus {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  height: 97vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 3%;
+  border-radius: 65px;
+  top: -66px;
+  margin-bottom: 5rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00008b;
+  /* clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); */
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  color: var(--white);
+  padding-left: 100px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero h1 {
+  padding-top:100px ;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: white;
+  /* margin-bottom: 2rem; */
+  opacity: 0.9;
+}
+
+.hero-points {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding:0.2rem 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-points h4 {
+  font-size: 1.3rem;
+  /* margin-bottom: 1rem; */
+}
+
+.hero-points ul {
+  list-style: none;
+}
+
+.hero-points li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-points li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--white);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 37px;
+  background-color: #D35400;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  font-size: 1.1rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  background-color: #fff;
+  border: 1px solid #D35400;
+  color: #D35400;
+}
+
+/* Main Header */
+.main-header {
+  text-align: center;
+  opacity: 0;
+  margin-top: -150px;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+  color: #FFCE32;
+  position: relative;
+  display: inline-block;
+}
+
+.main-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #FFAB00;
+  border-radius: 2px;
+}
+
+/* Cards Section */
+#cards {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--card-height));
+  gap: var(--card-margin);
+  padding-bottom: calc(var(--cards) * var(--card-padding));
+  margin-bottom: var(--card-margin);
+}
+
+#card1 { --index: 1; }
+#card2 { --index: 2; }
+#card3 { --index: 3; }
+
+.card {
+  position: sticky;
+  top: 10vh;
+  padding-top: calc(var(--index) * var(--card-padding));
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 98;
+}
+
+/* Card Colors */
+#card1 .card-body { background: #f4de97 }
+#card2 .card-body { background: #f9d86d }
+#card3 .card-body { background: #FFCE32 }
+
+.card-body {
+  box-sizing: border-box;
+  padding: 4rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  height: var(--card-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: var(--transition);
+  color: var(--white);
+}
+
+.card-body:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-body h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.card-body p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  color: white;
+  opacity: 0.9;
+}
+
+.card-body h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.benefits-list {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.benefits-list li {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.benefits-list li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--white);
+}
+
+.service-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #D35400;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  align-self: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  background-color: #fff;
+  color: #D35400;
+  border: 1px solid #D35400;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero h1 {
+      font-size: 3rem;
+  }
+  
+  .card-body {
+      padding: 3rem;
+      width: 98%;
+      margin-left: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+      --card-height: 70vh;
+  }
+  
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+  
+  .hero p {
+      font-size: 1.1rem;
+      padding: 0 40px;
+  }
+  
+  .card-body h1 {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+      --card-height: 65vh;
+      --card-padding: 2vh;
+  }
+  
+  .hero {
+    top: 8px;
+    border-radius: 15px;
+      margin: 0 10px;
+      height: auto;
+      padding: 6rem 0;
+  }
+
+  
+  .hero-points ul {
+    text-align: justify;
+  }
+  
+   .hero-content{
+    text-align: center;
+    padding: 0;
+   }
+
+  
+
+  .hero::before {
+      /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
+  }
+  
+  .hero h1 {
+       margin-top: -120px;
+      font-size: 2.2rem;
+  }
+  
+  .card-body {
+    margin: 0 10px;
+      padding: 2rem;
+      width: 95%;
+      margin-left: 10px;
+      /* height: auto; */
+  
+  }
+
+  
+  
+  .main-header{
+    margin: 0;
+  }
+  .main-header h1 {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+      --card-height: 75vh;
+  }
+  
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+  
+  .hero-points {
+      padding: 1.5rem;
+  }
+  
+  .card-body h1 {
+      font-size: 1.8rem;
+  }
+
+  
+  
+  .card-body p {
+      font-size: 1rem;
+  }
+
+ 
+  
+  .benefits-list li {
+      font-size: 1rem;
+      padding-left: 2rem;
+  }
+  
+  .service-btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+  }
+  
+}
+
+@media (max-width: 376px) {
+  .card-body{
+    height: auto;
+  }
+
+   .container{
+    height: auto;
+   }
+  #cards{
+    height: auto;
+   gap: 200px;
+  }
+}
+@media (min-width: 2800px) {
+  .container {
+      max-width: 2400px;
+  }
+  
+  :root {
+      --card-height: 60vh;
+  }
+  
+  .hero h1 {
+      font-size: 5rem;
+  }
+  
+  .hero p {
+      font-size: 1.8rem;
+  }
+  
+  .hero-points h4 {
+      font-size: 2rem;
+  }
+  
+  .hero-points li {
+      font-size: 1.5rem;
+  }
+  
+  .cta-button {
+      padding: 1.5rem 3rem;
+      font-size: 1.5rem;
+  }
+  
+  .main-header h1 {
+      font-size: 4rem;
+  }
+  
+  .card-body h1 {
+      font-size: 3.5rem;
+  }
+  
+  .card-body p {
+      font-size: 1.8rem;
+  }
+  
+  .benefits-list li {
+      font-size: 1.5rem;
+  }
+  
+  .service-btn {
+      padding: 1.5rem 3rem;
+      font-size: 1.5rem;
+  }
+}

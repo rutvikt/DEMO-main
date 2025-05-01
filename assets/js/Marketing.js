@@ -129,10 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 //hero nac sroll to border none
 window.addEventListener('scroll', function () {
   const nav = document.querySelector('.nav-links');
-  const hero = document.querySelector('#services'); // Adjust if your hero section has a different ID
+  const hero = document.querySelector('.main-header'); // Adjust if your hero section has a different ID
   const heroTop = hero.offsetTop;
 
   if (window.scrollY >= heroTop) {
@@ -142,34 +143,6 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// -----sticy remove footer
-document.addEventListener('DOMContentLoaded', function() {
-  const footer = document.querySelector('.other');
-  const stickyLeft = document.querySelector('.sticky-left');
-  const stickyRight = document.querySelector('.sticky-right');
-  
-  function checkFooterVisibility() {
-    const footerRect = footer.getBoundingClientRect();
-    const isFooterInView = (
-      footerRect.top <= window.innerHeight && 
-      footerRect.bottom >= 0
-    );
-    
-    if (isFooterInView) {
-      stickyLeft.style.display = 'none';
-      stickyRight.style.display = 'none';
-    } else {
-      stickyLeft.style.display = 'flex';
-      stickyRight.style.display = 'flex';
-    }
-  }
-  
-  // Initial check
-  checkFooterVisibility();
-  
-  // Check on scroll
-  window.addEventListener('scroll', checkFooterVisibility);
-});
 
 
 // Modal Handling
@@ -199,7 +172,6 @@ window.addEventListener('click', (e) => {
     document.body.style.overflow = 'auto';
   }
 });
-
 // Go to Top Button functionality
 
 const goToTopBtn = document.getElementById("goToTopBtn");
@@ -221,61 +193,67 @@ goToTopBtn.addEventListener("click", function() {
   });
 });
 // ---------------------------------------------------
+   // Intersection Observer for card animations
+   const cards = document.querySelectorAll('.card');
+        
+   const cardObserver = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+           if (entry.isIntersecting) {
+               entry.target.classList.add('visible');
+               
+               
+               // Animate chart bars when card becomes visible
+               if (entry.target.querySelector('.chart-fill')) {
+                   const fills = entry.target.querySelectorAll('.chart-fill');
+                   fills.forEach(fill => {
+                       fill.style.animation = 'chartGrow 1.5s ease-out forwards';
+                   });
+               }
+           }
+       });
+   }, {
+       threshold: 0.2,
+       rootMargin: '0px 0px -100px 0px'
+   });
 
+   cards.forEach(card => {
+       cardObserver.observe(card);
+   });
 
-    // Card Animation on Scroll
-    const cards = document.querySelectorAll('.card');
-    const cardsContainer = document.querySelector('.cards-scroll-container');
+   // Smooth scroll for navigation
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+       anchor.addEventListener('click', function (e) {
+           e.preventDefault();
+           
+           document.querySelector(this.getAttribute('href')).scrollIntoView({
+               behavior: 'smooth'
+           });
+       });
+   });
 
-    function checkCards() {
-        const triggerBottom = window.innerHeight / 5 * 4;
+   // Header scroll effect
+   const header = document.querySelector('.main-header');
+   
+   window.addEventListener('scroll', () => {
+       const scrollPosition = window.scrollY;
+       const heroHeight = document.querySelector('.hero').offsetHeight;
+       
+       if (scrollPosition > heroHeight * 0.7) {
+           header.style.opacity = '1';
+           header.style.transform = 'translateY(0)';
+       }
+   });
 
-        cards.forEach((card, index) => {
-            const cardTop = card.getBoundingClientRect().top;
+   // Floating marketing icons animation
+   const marketingIcons = document.querySelectorAll('.marketing-icon');
+   marketingIcons.forEach((icon, index) => {
+       icon.style.animationDelay = `${index * 0.5}s`;
+   });
 
-            if (cardTop < triggerBottom) {
-                card.classList.add('visible');
-                // Stagger the animation
-                card.style.transitionDelay = `${index * 0.1}s`;
-            }
-        });
-    }
-
-    // Initial check
-    checkCards();
-
-    // Check on scroll
-    window.addEventListener('scroll', checkCards);
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            }
-        });
-    });
-
-    // ---------------------------------------
- 
+   
     // --------------------------------sticky remove footer
 document.addEventListener('DOMContentLoaded', function() {
-  const footer = document.querySelector('footer');
+  const footer = document.querySelector('.other');
   const stickyLeft = document.querySelector('.sticky-left');
   const stickyRight = document.querySelector('.sticky-right');
   
@@ -301,3 +279,5 @@ document.addEventListener('DOMContentLoaded', function() {
   // Check on scroll
   window.addEventListener('scroll', checkFooterVisibility);
 });
+
+// --------------------

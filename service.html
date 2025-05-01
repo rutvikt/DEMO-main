@@ -1,889 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Graphic Design</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary: #4f46e5;
-      --secondary: #6366f1;
-      --dark: #1e293b;
-      --light: #f8fafc;
-      --gray: #64748b;
-      --accent: #10b981;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    }
-
-    body {
-      background-color: var(--light);
-      color: var(--dark);
-      overflow-x: hidden;
-    }
-
-    /* Sticky Navbar */
-    .navbar {
-      position: sticky;
-      top: 0;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-    }
-
-    .logo i {
-      margin-right: 10px;
-      font-size: 1.5rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      background-color: #fff;
-      padding: 2vh;
-      border-radius: 5vh;
-    }
-
-    .nav-links li {
-      list-style: none;
-      position: relative;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: 500;
-      transition: color 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .nav-links a.active {
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    .nav-links a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--primary);
-    }
-
-    .nav-links a i {
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-      display: none;
-    }
-
-    .nav-btn {
-      background: transparent;
-      color: var(--primary);
-      border: 2px solid var(--primary);
-      padding: 10px 20px;
-      border-radius: 3vh;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .nav-btn:hover {
-      background: var(--primary);
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 120px 40px 80px;
-      background: linear-gradient(135deg, rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)), 
-                  url('https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-    }
-
-    .hero h3 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      background: linear-gradient(45deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .breadcrumb {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      color: var(--gray);
-    }
-
-    .breadcrumb a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .breadcrumb a:hover {
-      color: var(--secondary);
-    }
-
-    .breadcrumb .separator {
-      opacity: 0.6;
-    }
-
-    /* Services Sections */
-    .services-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
-    .service-section {
-      display: flex;
-      align-items: center;
-      padding: 100px 0;
-      position: relative;
-    }
-
-    .service-section:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .service-content {
-      flex: 1;
-      padding: 0 40px;
-    }
-
-    .service-content h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      color: var(--dark);
-    }
-
-    .service-content p {
-      color: var(--gray);
-      line-height: 1.8;
-      margin-bottom: 30px;
-      font-size: 1.1rem;
-    }
-
-    .service-btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .service-btn:hover {
-      background: var(--secondary);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-    }
-
-    .service-visual {
-      flex: 1;
-      position: relative;
-      height: 500px;
-    }
-
-    .service-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      position: absolute;
-      transition: all 0.8s ease;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .service-visual img.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Timeline */
-    .timeline {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px;
-    }
-
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background: linear-gradient(to bottom, var(--primary), var(--secondary));
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
-      border-radius: 10px;
-    }
-
-    .timeline-item {
-      padding: 10px 40px;
-      position: relative;
-      width: 50%;
-      opacity: 0;
-      transform: translateX(-20px);
-      transition: all 0.5s ease;
-    }
-
-    .timeline-item:nth-child(odd) {
-      left: 0;
-    }
-
-    .timeline-item:nth-child(even) {
-      left: 50%;
-    }
-
-    .timeline-item.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      background: var(--primary);
-      border-radius: 50%;
-      top: 15px;
-      z-index: 1;
-    }
-
-    .timeline-item:nth-child(odd)::after {
-      right: -12px;
-    }
-
-    .timeline-item:nth-child(even)::after {
-      left: -12px;
-    }
-
-    .timeline-content {
-      padding: 20px 30px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    }
-
-    .timeline-content h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: var(--primary);
-    }
-
-    .timeline-content p {
-      color: var(--gray);
-      line-height: 1.6;
-    }
-
-    /* FAQ Section */
-    .faq-section {
-      padding: 100px 40px;
-      background: linear-gradient(135deg, rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9));
-      text-align: center;
-    }
-
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-section h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 60px;
-      color: var(--dark);
-    }
-
-    .faq-item {
-      margin-bottom: 20px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-    }
-
-    .faq-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .faq-question {
-      background: white;
-      padding: 20px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .faq-question:hover {
-      color: var(--primary);
-    }
-
-    .faq-question i {
-      transition: transform 0.3s ease;
-    }
-
-    .faq-answer {
-      background: white;
-      padding: 0 20px;
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .faq-item.active .faq-question {
-      background: var(--primary);
-      color: white;
-    }
-
-    .faq-item.active .faq-question i {
-      transform: rotate(180deg);
-    }
-
-    .faq-item.active .faq-answer {
-      padding: 20px;
-      max-height: 300px;
-      border-top: 1px solid #f1f1f1;
-    }
-
-    /* Footer */
-    footer {
-      background: var(--dark);
-      color: white;
-      padding: 100px 40px 30px;
-      position: relative;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
-
-    .footer-col h3 {
-      font-size: 1.3rem;
-      margin-bottom: 25px;
-      position: relative;
-    }
-
-    .footer-col h3::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 40px;
-      height: 3px;
-      background: var(--primary);
-    }
-
-    .footer-col p {
-      color: #94a3b8;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 12px;
-    }
-
-    .footer-links a {
-      color: #94a3b8;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: white;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      transition: all 0.3s ease;
-    }
-
-    .social-links a:hover {
-      background: var(--primary);
-      transform: translateY(-3px);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 50px;
-      margin-top: 50px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: #94a3b8;
-      font-size: 0.9rem;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .service-section {
-        flex-direction: column;
-        padding: 60px 0;
-      }
-
-      .service-section:nth-child(even) {
-        flex-direction: column;
-      }
-
-      .service-content {
-        padding: 0;
-        margin-bottom: 40px;
-      }
-
-      .service-visual {
-        height: 400px;
-      }
-
-      .timeline::after {
-        left: 31px;
-      }
-
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-
-      .timeline-item:nth-child(even) {
-        left: 0;
-      }
-
-      .timeline-item::after {
-        left: 18px;
-      }
-
-      .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .navbar {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .nav-links a i {
-        display: block;
-      }
-
-      .hero h3 {
-        font-size: 2.2rem;
-      }
-
-      .service-content h2 {
-        font-size: 2rem;
-      }
-
-      .service-visual {
-        height: 300px;
-      }
-
-      .faq-section h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        padding: 100px 20px 60px;
-      }
-
-      .service-content h2 {
-        font-size: 1.8rem;
-      }
-
-      .service-btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      .footer-container {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-col {
-        margin-bottom: 30px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Sticky Navbar with Icons -->
-  <nav class="navbar">
-    <div class="logo">
-      <i class="fas fa-rocket"></i>
-      <span>BrandHub</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#"><i class="fas fa-palette"></i> Graphic Design</a></li>
-      <li><a href="#"><i class="fas fa-code"></i> Web Development</a></li>
-      <li><a href="#"><i class="fas fa-pencil-ruler"></i> UI/UX Design</a></li>
-      <li><a href="#"><i class="fas fa-mobile-alt"></i> Mobile App</a></li>
-      <li><a href="#"><i class="fas fa-cogs"></i> Custom Software</a></li>
-      <li><a href="#"><i class="fas fa-bullhorn"></i> Marketing</a></li>
-    </ul>
-    <button class="nav-btn">+ Become a Client</button>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h3>Graphic Design</h3>
-    <div class="breadcrumb">
-      <a href="/">Home</a>
-      <span class="separator">></span>
-      <span>Graphic Design</span>
-    </div>
-  </section>
-
-  <!-- Service Sections (Alternating Layout) -->
-  <div class="services-container">
-    <!-- Section 1 -->
-    <section class="service-section">
-      <div class="service-content">
-        <h2>Creative Brand Identity</h2>
-        <p>We craft unique visual identities that capture your brand's essence and resonate with your target audience. Our designs go beyond logos to create comprehensive brand systems that maintain consistency across all touchpoints.</p>
-        <button class="service-btn">Explore Branding</button>
-      </div>
-      <div class="service-visual">
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Brand Identity" class="active">
-      </div>
-    </section>
-
-    <!-- Section 2 (Reversed) -->
-    <section class="service-section">
-      <div class="service-content">
-        <h2>Print & Packaging Design</h2>
-        <p>From business cards to product packaging, we create print materials that make a lasting impression. Our designs combine aesthetic appeal with practical functionality to ensure your brand stands out on the shelf.</p>
-        <button class="service-btn">View Print Portfolio</button>
-      </div>
-      <div class="service-visual">
-        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Print Design">
-      </div>
-    </section>
-
-    <!-- Section 3 -->
-    <section class="service-section">
-      <div class="service-content">
-        <h2>Digital Illustrations</h2>
-        <p>Our custom illustrations bring concepts to life with artistic flair. Whether you need icons, infographics, or full-scale artwork, we create visuals that enhance your messaging and engage your audience.</p>
-        <button class="service-btn">See Illustrations</button>
-      </div>
-      <div class="service-visual">
-        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Digital Illustrations">
-      </div>
-    </section>
-
-    <!-- Section 4 (Reversed) -->
-    <section class="service-section">
-      <div class="service-content">
-        <h2>Social Media Graphics</h2>
-        <p>Eye-catching social media content that stops the scroll. We design platform-optimized visuals that increase engagement and reinforce your brand identity across all social channels.</p>
-        <button class="service-btn">Explore Social Designs</button>
-      </div>
-      <div class="service-visual">
-        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Social Media Graphics">
-      </div>
-    </section>
-
-    <!-- Section 5 -->
-    <section class="service-section">
-      <div class="service-content">
-        <h2>Motion Graphics</h2>
-        <p>Bring your brand to life with captivating animations. From logo animations to explainer videos, we create motion graphics that tell your story and capture attention.</p>
-        <button class="service-btn">View Motion Work</button>
-      </div>
-      <div class="service-visual">
-        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Motion Graphics">
-      </div>
-    </section>
-
-    <!-- Section 6 (Reversed) -->
-    <section class="service-section">
-      <div class="service-content">
-        <h2>Environmental Design</h2>
-        <p>Create immersive brand experiences in physical spaces. We design signage, exhibitions, and environmental graphics that guide, inform, and delight your audience.</p>
-        <button class="service-btn">Learn About Environmental Design</button>
-      </div>
-      <div class="service-visual">
-        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Environmental Design">
-      </div>
-    </section>
-  </div>
-
-  <!-- Timeline Section -->
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Discovery</h3>
-        <p>We start by understanding your business, goals, and audience through research and strategy sessions.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Concept Development</h3>
-        <p>Our team brainstorms and creates initial design concepts tailored to your brand identity.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Design Refinement</h3>
-        <p>We refine the selected concepts based on your feedback, perfecting every detail.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Implementation</h3>
-        <p>Final designs are prepared and delivered in all required formats for various applications.</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>Delivery & Support</h3>
-        <p>We provide all assets and ongoing support to ensure successful implementation.</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <style>
+.office-map-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.map-container {
+  position: relative;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.clickable-map {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.clickable-map:hover {
+  transform: scale(1.02);
+}
+
+.google-map-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.google-map-container.active {
+  display: block;
+}
+
+.close-map-btn {
+  display: block;
+  margin: 15px auto 0;
+  padding: 8px 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+   </style>
+   <body>
+    <section class="office-map-section">
+  <div class="container">
+    <h2>Our Office Location</h2>
+    <div class="map-container">
+      <!-- Clickable Gujarat image map -->
+      <img src="gujarat-map.png" alt="Gujarat Map" usemap="#gujaratMap" class="clickable-map">
+      
+      <!-- Map definition for clickable areas -->
+      <map name="gujaratMap">
+        <area shape="rect" coords="x1,y1,x2,y2" href="#vadodara-location" alt="Vadodara" title="Our Vadodara Office">
+      </map>
+      
+      <!-- Embedded Google Map (hidden by default) -->
+      <div id="vadodara-location" class="google-map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.185964416028!2d73.1817223154456!3d22.30721434945233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE4JzI1LjkiTiA3M8KwMTEnMDEuOSJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <button class="close-map-btn">Close Map</button>
       </div>
     </div>
   </div>
-
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="faq-container">
-      <h2>Frequently Asked Questions</h2>
+</section>
       
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What's included in your graphic design services?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Our graphic design services include logo design, brand identity systems, business collateral, packaging design, digital graphics, and more. Each project begins with a discovery phase to understand your needs, followed by concept development, refinement, and final delivery of all necessary files.</p>
-        </div>
-      </div>
-      
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>How long does a typical design project take?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Project timelines vary based on scope and complexity. A basic logo design might take 2-3 weeks, while a comprehensive brand identity system could take 4-6 weeks. We provide a detailed timeline during our initial consultation after understanding your specific requirements.</p>
-        </div>
-      </div>
-      
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What file formats will I receive?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>We deliver all standard file formats including vector files (AI, EPS, PDF), high-resolution raster files (PNG, JPG), and any specialized formats required for your specific applications. We also provide guidelines on how to use each file type.</p>
-        </div>
-      </div>
-      
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Do you offer revisions?</span>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Yes, we include a set number of revision rounds in each project (typically 2-3 rounds depending on the package). Additional revisions can be accommodated at an hourly rate. Our goal is to ensure you're completely satisfied with the final designs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Get the clickable map image
+  const gujaratMap = document.querySelector('.clickable-map');
+  const mapContainer = document.querySelector('.google-map-container');
+  const closeMapBtn = document.querySelector('.close-map-btn');
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-col">
-        <h3>BrandHub</h3>
-        <p>We help businesses create meaningful connections with their audiences through innovative design and marketing solutions.</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="#">Graphic Design</a></li>
-          <li><a href="#">Web Development</a></li>
-          <li><a href="#">UI/UX Design</a></li>
-          <li><a href="#">Mobile App Development</a></li>
-          <li><a href="#">Marketing Solutions</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Contact Us</h3>
-        <p>123 Design Avenue<br>Creative City, CC 10001</p>
-        <p>Email: hello@brandhub.com<br>Phone: (123) 456-7890</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 BrandHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </div>
-  </footer>
+  // Option 1: Click on the entire map image
+  gujaratMap.addEventListener('click', function() {
+    mapContainer.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
 
-  <script>
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.style.padding = '15px 40px';
-        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-        document.querySelectorAll('.nav-links a i').forEach(icon => {
-          icon.style.display = 'block';
-        });
-      } else {
-        navbar.style.padding = '20px 40px';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
-        document.querySelectorAll('.nav-links a i').forEach(icon => {
-          icon.style.display = 'none';
-        });
-      }
-    });
+  // Option 2: If using image map areas (alternative approach)
+  document.querySelector('area[href="#vadodara-location"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    mapContainer.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
 
-    // Service section image animation
-    const serviceSections = document.querySelectorAll('.service-section');
-    const serviceImages = document.querySelectorAll('.service-visual img:not(.active)');
+  // Close map functionality
+  closeMapBtn.addEventListener('click', function() {
+    mapContainer.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
 
-    function checkServiceSections() {
-      const triggerBottom = window.innerHeight / 5 * 4;
-      
-      serviceSections.forEach((section, index) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        
-        if (sectionTop < triggerBottom) {
-          const img = section.querySelector('.service-visual img:not(.active)');
-          if (img) {
-            setTimeout(() => {
-              img.classList.add('active');
-            }, index * 300);
-          }
-        }
-      });
+  // Close when clicking outside
+  window.addEventListener('click', function(e) {
+    if (e.target === mapContainer) {
+      mapContainer.classList.remove('active');
+      document.body.style.overflow = 'auto';
     }
+  });
+});
+</script>
+   </body>
 
-    // Timeline animation
-    const timelineItems = document.querySelectorAll('.timeline-item');
-
-    function checkTimeline() {
-      const triggerBottom = window.innerHeight / 5 * 4;
-      
-      timelineItems.forEach((item, index) => {
-        const itemTop = item.getBoundingClientRect().top;
-        
-        if (itemTop < triggerBottom) {
-          setTimeout(() => {
-            item.classList.add('visible');
-          }, index * 200);
-        }
-      });
-    }
-
-    // FAQ toggle
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      question.addEventListener('click', () => {
-        item.classList.toggle('active');
-      });
-    });
-
-    // Initial checks
-    checkServiceSections();
-    checkTimeline();
-
-    // Check on scroll
-    window.addEventListener('scroll', () => {
-      checkServiceSections();
-      checkTimeline();
-    });
-  </script>
-</body>
 </html>
